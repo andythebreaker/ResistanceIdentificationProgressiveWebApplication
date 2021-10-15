@@ -135,7 +135,7 @@ document.getElementById("trig_corner_finish").addEventListener("click", function
                                     ctx.fillRect(Math.floor(parseInt(document.getElementById("wh_ptx").innerText)),
                                         Math.floor(parseInt(document.getElementById("wh_pty").innerText)),
                                         10, 10);
-                                    document.getElementById("wo_ptx").innerText = Math.floor(my_canvW * parseInt(document.getElementById("wo_ptx").innerText) /
+                                    /*document.getElementById("wo_ptx").innerText = Math.floor(my_canvW * parseInt(document.getElementById("wo_ptx").innerText) /
                                         parseInt(document.getElementById("xmax").innerText) - my_canvW *
                                         parseInt(document.getElementById("oo_ptx").innerText) /
                                         parseInt(document.getElementById("xmax").innerText)
@@ -182,7 +182,7 @@ document.getElementById("trig_corner_finish").addEventListener("click", function
                                         my_canvH *
                                         parseInt(document.getElementById("oo_pty").innerText) /
                                         parseInt(document.getElementById("ymax").innerText)
-                                    );
+                                    );*/
 
                                 });
                         });

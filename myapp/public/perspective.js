@@ -32,6 +32,7 @@ const setUpApplyButton = function () {
     })
     let dst = new cv.Mat();
     let dsize = new cv.Size(imageHeight, imageWidth);
+    console.log('=============');console.log(pointsArray);
     let srcTri = cv.matFromArray(4, 1, cv.CV_32FC2, pointsArray);
     let dstTri = cv.matFromArray(4, 1, cv.CV_32FC2, [0, 0, imageHeight, 0, imageHeight, imageWidth, 0, imageWidth]);
     let M = cv.getPerspectiveTransform(srcTri, dstTri);

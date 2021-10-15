@@ -121,6 +121,15 @@ var exampleFeaturesCornersMap;
 var exampleFeaturesCropRect;
 
 function clickDetectCorners() {
+  var zzz = document.getElementById("canvasAutoCrop");
+  var dupNode = zzz.cloneNode(true);
+  dupNode.id = "imgPerspectiveTransformation";
+  document.body.appendChild(dupNode);
+  var destinationCanvas = document.getElementById("imgPerspectiveTransformation");
+  var destCtx = destinationCanvas.getContext('2d');//grab the context from your destination canvas
+  //call its drawImage() function passing it the source canvas directly
+  destCtx.drawImage(zzz, 0, 0);
+  //以上拷貝
   var factor = 1000 / 300;
   var image = new MarvinImage(300, 158);
   Marvin.scale(imageAutoCrop, image, 300);
