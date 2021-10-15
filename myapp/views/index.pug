@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  .divFlex.divExperiment.justLeaveItAnyway(style='width:825px; margin-left:auto; margin-right:auto;')
+    .floatLeft
+      canvas#canvasExampleFilters(width='640' height='400')
+    .floatLeft
+      .buttonFilter(onclick='clickExampleFiltersGrayScale()') GrayScale
+      .buttonFilter(onclick='clickExampleFiltersBlackAndWhite()') Black and White
+      .buttonFilter(onclick='clickExampleFiltersSepia()') Sepia
+      .buttonFilter(onclick='clickExampleFiltersEmboss()') Emboss
+      .buttonFilter(onclick='clickExampleFiltersHalftone()') Halftone
+      .buttonFilter(onclick='clickExampleFiltersInvertColors()') Invert
+      .buttonFilter(onclick='clickExampleFiltersEdge()') Edge Detection
+      .buttonFilter(onclick='clickExampleFiltersEdge2()') Edge Detection 2
+      .buttonFilter(onclick='clickExampleFiltersCrop()') Crop
+      .buttonFilter(onclick='clickExampleFiltersInvertScale()') Scale
+      .buttonFilter(onclick='clickExampleFiltersReset()') Reset
+  .divFlex.divExperiment(style='width:1188; margin-left:auto; margin-right:auto;')
+    .floatLeft
+      canvas#canvasAutoCrop(width='1000' height='570')
+    .floatLeft
+      button.buttonFilter(onclick='clickDetectCorners()') 1. Detect Corners
+      .buttonFilter.justLeaveItAnyway(onclick='clickSelectCropArea()') 2. Select Crop Area
+      .buttonFilter.justLeaveItAnyway(onclick='clickAutoCropCrop()') 3. Crop
+      button.buttonFilter(onclick='clickAutoCropReset()') Reset
+  .divFlex.divExperiment.justLeaveItAnyway(style='width:1188; margin-left:auto; margin-right:auto;')
+    .floatLeft
+      canvas#canvasFractals(width='1000' height='570')
+    .floatLeft
+      .buttonFilter(onclick='clickFractalDragon()') Dragon
+      .buttonFilter(onclick='clickFractalTree()') Tree
+      .buttonFilter(onclick='clickFractalBarnsleyLeaf()') Barnsley Leaf
+      .buttonFilter(onclick='clickFractalMappleLeaf()') Mapple Leaf
+  table
+    thead
+      tr
+        th 角點座標
+        th#trig_corner_finish 是否為最邊角
+        th 00_sqrt_of_sum_of_pow
+        th w0_sqrt_of_sum_of_pow
+        th 0h_sqrt_of_sum_of_pow
+        th wh_sqrt_of_sum_of_pow
+    tbody#mapchart
+    tfoot 
+      tr 
+        td n/a
+        td n/a
+        td#00_sqrt_of_sum_of_pow n/a
+        td#w0_sqrt_of_sum_of_pow n/a
+        td#0h_sqrt_of_sum_of_pow n/a
+        td#wh_sqrt_of_sum_of_pow n/a
+  script(type='text/javascript' src='/javascripts/index.js')
+  script(type='text/javascript' src='/javascripts/marvin.js')
+
