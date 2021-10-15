@@ -134,7 +134,7 @@ function clickDetectCorners() {
         if (document.getElementById("mapchart")) {
           document.getElementById("mapchart").innerHTML += `
        <tr><td>
-       ${String(x) + "*" + String(y)}
+       ${String(Math.floor(x * factor)) + "*" + String(Math.floor(y * factor))}
        </td><td>
        n/a
        </td><td>

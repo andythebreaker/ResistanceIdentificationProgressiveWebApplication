@@ -32,6 +32,51 @@ block content
       .buttonFilter(onclick='clickFractalTree()') Tree
       .buttonFilter(onclick='clickFractalBarnsleyLeaf()') Barnsley Leaf
       .buttonFilter(onclick='clickFractalMappleLeaf()') Mapple Leaf
+  button(onclick='canvDraw()') canvDraw
+  table 
+    thead 
+      tr 
+        th up-left-x
+        th up-left-y
+        th up-right-x
+        th up-right-y
+        th down-left-x
+        th down-left-y
+        th down-right-x
+        th down-right-y
+    tbody#udlrxy
+  table 
+    thead 
+      tr 
+        th x座標max
+        th y座標max
+    tbody 
+      tr 
+        td#xmax
+        td#ymax
+  table 
+    thead 
+      tr 
+        th 轉換座標臨界點
+        th 座標點x
+        th 座標點y
+    tbody 
+      tr 
+        td wo
+        td#wo_ptx
+        td#wo_pty
+      tr 
+        td oh
+        td#oh_ptx
+        td#oh_pty
+      tr 
+        td wh
+        td#wh_ptx
+        td#wh_pty
+    tfoot 
+        td oo
+        td#oo_ptx
+        td#oo_pty
   table
     thead
       tr
@@ -50,6 +95,7 @@ block content
         td#w0_sqrt_of_sum_of_pow n/a
         td#0h_sqrt_of_sum_of_pow n/a
         td#wh_sqrt_of_sum_of_pow n/a
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.0/algebra.min.js' integrity='sha512-uRz8bf2rMRddlRP1Og3D17oayi+oXNJdQxGzJqGD76gCNs+Q8dZOw9GbsJsW8853vyYxZhxEhfz/IZfelCyxVA==' crossorigin='anonymous' referrerpolicy='no-referrer')
   script(type='text/javascript' src='/javascripts/index.js')
   script(type='text/javascript' src='/javascripts/marvin.js')
 
