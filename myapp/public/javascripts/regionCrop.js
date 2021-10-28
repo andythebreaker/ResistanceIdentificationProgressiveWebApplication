@@ -5,6 +5,21 @@ document.getElementById('regionCrop').addEventListener('click', function (e) {
     var squareLengthAndWidth_w = parseInt(income_img_width, 10) / 6.0;
     var sla20_h = squareLengthAndWidth_h * 0.8;
     var sla20_w = squareLengthAndWidth_w * 0.8;
+    var crp2 = document.createElement('canvas');
+    crp2.style.width = String(Math.round(parseInt(income_img_width, 10) * 0.9 * 0.8 / (1.15 + 0.9 + 1.15))) + 'px';
+    crp2.style.height = String(Math.round(parseInt(income_img_height, 10) * 6.0 * 0.8 / (6.0 + 8.0 + 8.0))) + 'px';
+    crp2.id = 'myres';
+    document.body.appendChild(crp2);
+    console.log('good');
+    var cropX0 = parseInt(income_img_width, 10) * 0.9 * 0.2 / (1.15 + 0.9 + 1.15) + parseInt(income_img_width, 10) * 1.15 / (1.15 + 0.9 + 1.15);
+    var cropY0 = parseInt(income_img_height, 10) * 6.0 * 0.2 / (6.0 + 8.0 + 8.0) + parseInt(income_img_height, 10) * 8.0 / (6.0 + 8.0 + 8.0);
+    var cropWidth0 = parseInt(income_img_width, 10) * 0.9 * 0.8 / (1.15 + 0.9 + 1.15);
+    var cropHeight0 = parseInt(income_img_height, 10) * 6.0 * 0.8 / (6.0 + 8.0 + 8.0);
+    var canvas2 = document.getElementById('myres');
+    canvas2.width = cropWidth0;
+    canvas2.height = cropHeight0;
+    var ctx2 = canvas2.getContext('2d');
+    ctx2.drawImage(document.getElementById('SOLUimgPerspectiveTransformation'), cropX0, cropY0, cropWidth0, cropHeight0, 0, 0, cropWidth0, cropHeight0);
     for (let index = 0; index < 6; index++) {
         var crp1 = document.createElement('canvas');
         crp1.style.width = String(Math.round(sla20_w)) + 'px';
