@@ -1,7 +1,8 @@
 extends layout
 
 block content
-  p 操作方法-先按一號按鈕-再按Apply按鈕
+  p 操作方法-先按一號按鈕-再按Apply按鈕-再regionCrop
+  button#regionCrop regionCrop 
   canvas#SOLUimgPerspectiveTransformation(width='1000' height='690')
   .container(style='display:none;')
     #background.o_image
@@ -125,3 +126,4 @@ block content
   script(src='./libs/numeric-solve.min.js')
   script(src='./index.js')
   script(type='text/javascript' src='/javascripts/TARGimgPerspectiveTransformation.js')
+  script(type='text/javascript' src='/javascripts/regionCrop.js')
