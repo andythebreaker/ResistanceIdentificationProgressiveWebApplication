@@ -11,8 +11,8 @@ document.getElementById('regionCrop').addEventListener('click', function (e) {
     crp2.id = 'myres';
     document.body.appendChild(crp2);
     console.log('good');
-    var cropX0 = parseInt(income_img_width, 10) * 0.9 * 0.2 / (1.15 + 0.9 + 1.15) + parseInt(income_img_width, 10) * 1.15 / (1.15 + 0.9 + 1.15);
-    var cropY0 = parseInt(income_img_height, 10) * 6.0 * 0.2 / (6.0 + 8.0 + 8.0) + parseInt(income_img_height, 10) * 8.0 / (6.0 + 8.0 + 8.0);
+    var cropX0 = parseInt(income_img_width, 10) * 0.9 * 0.1 / (1.15 + 0.9 + 1.15) + parseInt(income_img_width, 10) * 1.15 / (1.15 + 0.9 + 1.15);
+    var cropY0 = parseInt(income_img_height, 10) * 6.0 * 0.1 / (6.0 + 8.0 + 8.0) + parseInt(income_img_height, 10) * 8.0 / (6.0 + 8.0 + 8.0);
     var cropWidth0 = parseInt(income_img_width, 10) * 0.9 * 0.8 / (1.15 + 0.9 + 1.15);
     var cropHeight0 = parseInt(income_img_height, 10) * 6.0 * 0.8 / (6.0 + 8.0 + 8.0);
     var canvas2 = document.getElementById('myres');
@@ -27,8 +27,8 @@ document.getElementById('regionCrop').addEventListener('click', function (e) {
         crp1.id = 'crpU' + String(index);
         document.body.appendChild(crp1);
         console.log('good');
-        var cropX = squareLengthAndWidth_w * 0.2 + squareLengthAndWidth_w * (index);
-        var cropY = squareLengthAndWidth_h * 0.2;
+        var cropX = squareLengthAndWidth_w * 0.1 + squareLengthAndWidth_w * (index);
+        var cropY = squareLengthAndWidth_h * 0.1;
         var cropWidth = squareLengthAndWidth_w * 0.8;
         var cropHeight = squareLengthAndWidth_h * 0.8;
         var canvas1 = document.getElementById('crpU' + String(index));
@@ -44,8 +44,8 @@ document.getElementById('regionCrop').addEventListener('click', function (e) {
         crp1.id = 'crpD' + String(index);
         document.body.appendChild(crp1);
         console.log('good');
-        var cropX = squareLengthAndWidth_w * 0.2 + squareLengthAndWidth_w * (index);
-        var cropY = squareLengthAndWidth_h * 0.2 + parseInt(income_img_height, 10) * (8.0 + 6.0) / (6.0 + 8.0 + 8.0);
+        var cropX = squareLengthAndWidth_w * 0.1 + squareLengthAndWidth_w * (index);
+        var cropY = squareLengthAndWidth_h * 0.1 + parseInt(income_img_height, 10) * (8.0 + 6.0) / (6.0 + 8.0 + 8.0);
         var cropWidth = squareLengthAndWidth_w * 0.8;
         var cropHeight = squareLengthAndWidth_h * 0.8;
         var canvas1 = document.getElementById('crpD' + String(index));
