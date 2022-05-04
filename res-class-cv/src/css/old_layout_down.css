@@ -1,58 +1,61 @@
-body{
-    margin:0;
+body {
+    margin: 0;
     padding: 0;
 }
-.container{
+
+.container {
     display: flex;
 }
-.container .o_image{
+
+.container .o_image {
     width: 50%;
     border-right: 1px solid;
 }
-.container .p_image{
+
+.container .p_image {
     width: 50%;
     border-left: 1px solid;
     text-align: center;
 }
-span{
+
+span {
     display: block;
     text-align: center;
-    background-color: blue;
-    color:white;
+    background-color: #ffc0cb11;
+    color: white;
     padding: 5px;
-    margin-bottom: 5px;; 
+    margin-bottom: 5px;
+    ;
 }
-img{
+
+img {
     border: 1px solid blue;
 }
-.b_container{
+
+.b_container {
     text-align: center;
     width: 100%;
 }
-button{
+
+button {
     width: 80px;
     height: 30px;
     border: none;
     background-color: coral;
-    
+
 }
-svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .line {
+
+.line {
     stroke: blue;
     stroke-width: 0.7px;
     stroke-linecap: square;
-  }
-  
-  .handle {
+}
+
+.handle {
     fill: blue;
     pointer-events: all;
-    stroke:blue;
+    stroke: blue;
     stroke-width: 2px;
     cursor: move;
     opacity: 0.8;
-  }
+}
