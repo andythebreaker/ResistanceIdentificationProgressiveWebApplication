@@ -5,6 +5,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Stack from '@mui/material/Stack';
 
 export class Welcome extends React.Component {
   constructor(props) {
@@ -91,6 +92,10 @@ export class Welcome extends React.Component {
     });
   }
 
+  dokmeans(){
+      console.log("dokmeans");
+  }
+
   render() {
     return (
       <table>
@@ -129,6 +134,9 @@ export class Welcome extends React.Component {
                   this.onchangeURL(e.target);
                 }}
               />
+              <Stack spacing={2} direction="row">
+              <Button variant="text" onClick={this.dokmeans}>dokmeans</Button>
+            </Stack>
               <Card sx={{ maxWidth: 275 }}>
                 <CardContent>
                   <Typography className="rtW">

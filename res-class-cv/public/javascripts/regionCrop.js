@@ -33,7 +33,7 @@ document.getElementById('regionCrop').addEventListener('click', function (e) {
     canvas2.height = cropHeight0;
     var ctx2 = canvas2.getContext('2d');
     ctx2.drawImage(document.getElementById('SOLUimgPerspectiveTransformation'), cropX0, cropY0, cropWidth0, cropHeight0, 0, 0, cropWidth0, cropHeight0);
-    toReact(1,canvas2,cropWidth0,cropHeight0);
+    toReact(1, canvas2, 225,150.545454)//cropWidth0, cropHeight0);
     ////////////////
     var cropX0a = parseInt(income_img_width, 10) * 1.15 * 0.1 / (1.15 + 0.9 + 1.15) + parseInt(income_img_width, 10) * 0 / (1.15 + 0.9 + 1.15);
     var cropY0a = parseInt(income_img_height, 10) * 6.0 * 0.1 / (6.0 + 8.0 + 8.0) + parseInt(income_img_height, 10) * 8.0 / (6.0 + 8.0 + 8.0);
@@ -55,7 +55,7 @@ document.getElementById('regionCrop').addEventListener('click', function (e) {
     var ctx2b = canvas2b.getContext('2d');
     ctx2b.drawImage(document.getElementById('SOLUimgPerspectiveTransformation'), cropX0b, cropY0b, cropWidth0b, cropHeight0b, 0, 0, cropWidth0b, cropHeight0b);
 
-    console.log(overlayCanvases(document.getElementById('backgroundL'), document.getElementById('backgroundR')));
+overlayCanvases(document.getElementById('backgroundL'), document.getElementById('backgroundR'));
     ///////////////////////////
 
     for (let index = 0; index < 6; index++) {
@@ -74,7 +74,7 @@ document.getElementById('regionCrop').addEventListener('click', function (e) {
         canvas1.height = cropHeight;
         var ctx1 = canvas1.getContext('2d');
         ctx1.drawImage(document.getElementById('SOLUimgPerspectiveTransformation'), cropX, cropY, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight);
-        toReact(index+2,canvas1,cropWidth,cropHeight);
+        toReact(index + 2, canvas1, 133.333333,200.727272)//cropWidth, cropHeight);
     }
     for (let index = 0; index < 6; index++) {
         var crp1 = document.createElement('canvas');
@@ -92,7 +92,7 @@ document.getElementById('regionCrop').addEventListener('click', function (e) {
         canvas1.height = cropHeight;
         var ctx1 = canvas1.getContext('2d');
         ctx1.drawImage(document.getElementById('SOLUimgPerspectiveTransformation'), cropX, cropY, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight);
-        toReact(index+8,canvas1,cropWidth,cropHeight);
+        toReact(index + 8, canvas1, 133.333333,200.727272)// cropWidth, cropHeight);
     }
 });
 /* assumes each canvas has the same dimensions */
@@ -116,12 +116,14 @@ var overlayCanvases = function (cnv1, cnv2/*, cnv3*/) {//https://stackoverflow.c
 
     ctx.drawImage(cnv1, 0, 0, cnv1.width, cnv1.height);
     ctx.drawImage(cnv2, 0, cnv2.height, cnv2.width, cnv2.height);
+    newCanvas.id="overlayCanvases";
+    document.body.appendChild(newCanvas);
     //$(".reactTransImagePath:nth-child(0)").val(newCanvas.toDataURL());
     /*document.getElementsByClassName('rtU')[0].innerText = newCanvas.toDataURL();
     document.getElementsByClassName('rtW')[0].innerText = width;
     document.getElementsByClassName('rtH')[0].innerText = height;
     document.getElementsByClassName('reactTransRefresh')[0].click();
-    */toReact(0,newCanvas,width,height);
+    */toReact(0, newCanvas,200,191.333333)// width, height);
     /*function setKeywordText(text) {
         var el = document.getElementsByClassName('reactTransImagePath')[0];
         el.value = text;
@@ -129,15 +131,43 @@ var overlayCanvases = function (cnv1, cnv2/*, cnv3*/) {//https://stackoverflow.c
         evt.initEvent("onchange", true, true);
         el.dispatchEvent(evt);
     }
-    
     setKeywordText(newCanvas.toDataURL());*/
-
-    return newCanvas.toDataURL();
 };
 
-var toReact=function(idd,canv,ww,hh){
-    document.getElementsByClassName('rtU')[idd].innerText = canv.toDataURL();
+var toReact = function (idd, canv, ww, hh) {
+    var tmp_canv_obj = resizeC(canv.id, ww, hh);
+    document.getElementsByClassName('rtU')[idd].innerText = tmp_canv_obj.toDataURL();
     document.getElementsByClassName('rtW')[idd].innerText = ww;
     document.getElementsByClassName('rtH')[idd].innerText = hh;
     document.getElementsByClassName('reactTransRefresh')[idd].click();
+    $('#' + tmp_canv_obj.id).remove();
+}
+
+var resizeC = function (canvDOM, ww, hh) {    /*
+____                       __                             
+/ __ \____     ____  ____  / /_   ________  __  __________ 
+/ / / / __ \   / __ \/ __ \/ __/  / ___/ _ \/ / / / ___/ _ \
+/ /_/ / /_/ /  / / / / /_/ / /_   / /  /  __/ /_/ (__  )  __/
+/_____/\____/  /_/ /_/\____/\__/  /_/   \___/\__,_/____/\___/ 
+                                                          
+*/
+    console.log(canvDOM); 
+    let src = cv.imread(canvDOM);
+    let dst = new cv.Mat();
+    cv.resize(src, dst, { width: ww, height: hh });
+    var tmp_canv = document.createElement('canvas');
+    var tmpid = "tmpcanvrez" + randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+    tmp_canv.id = tmpid;
+    tmp_canv.width = ww;
+    tmp_canv.classList.add("tmpcanvrez");
+    tmp_canv.height = hh;
+    document.body.appendChild(tmp_canv);
+    cv.imshow(tmpid, dst);
+    return document.getElementById(tmpid);
+}
+
+function randomString(length, chars) {
+    var result = '';
+    for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
+    return result;
 }
