@@ -1,7 +1,18 @@
-const utils = new Utils('errorMessage');
-const imageUsed = document.getElementById('sample').getAttribute('src')
-console.log(imageUsed)
-const applyButton = document.getElementById('apply')
+var utils = null;
+function checkFlag3() {
+    if (typeof Utils === 'undefined') {
+        window.setTimeout(checkFlag3, 100); /* this checks the flag every 100 milliseconds*/
+    } else {
+        /* do something*/
+        utils = new Utils('errorMessage');
+    }
+}
+checkFlag3();
+
+//utils = new Utils('errorMessage');
+const imageUsed = document.getElementById('sample').getAttribute('src');
+console.log(imageUsed);
+const applyButton = document.getElementById('apply');
 const setUpApplyButton = function () {
     //console.log(cv)
 
@@ -44,9 +55,19 @@ const setUpApplyButton = function () {
 
 
 }
-applyButton.setAttribute('disabled', 'true')
-applyButton.onclick = setUpApplyButton
-utils.loadOpenCv();
+applyButton.setAttribute('disabled', 'true');
+applyButton.onclick = setUpApplyButton;
+function checkFlag2() {
+    if (!utils) {
+        window.setTimeout(checkFlag2, 100); /* this checks the flag every 100 milliseconds*/
+    } else {
+        /* do something*/
+        utils.loadOpenCv();
+    }
+}
+checkFlag2();
+
+//
 function AfterOpenCVisLoaded() {
     function checkFlag() {
         if (!cv.getBuildInformation) {

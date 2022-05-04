@@ -1,7 +1,21 @@
 //import logo from './logo.svg';
 import './App.css'; import './css/old_layout_down.css'; import './css/old_layout_up.css';
 import { useState, useEffect } from "react";
-
+import { KMeans } from 'scikitjs'
+import { Welcome } from './component/KmeansBtn.jsx'
+let X = [
+  [1, 2, 7],
+  [1, 4, 7],
+  [4, 4, 7],
+  [4, 0, 7]
+];
+const kmean = new KMeans({ nClusters: 2 });
+console.log(X);
+var kfp = kmean.fitPredict(X);
+kfp.array().then(function (d) { console.log(d) });
+/*TODO:
+find out what is diff between fitPredict and fit???????????
+*/
 
 function App() {
   const data = `
@@ -147,7 +161,9 @@ function App() {
   <p>X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;XXXXXX&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;XXXX&nbsp;&nbsp;</p>
   <button id="kmeansButtonDom">kmeansStart </button><canvas id="kmeansRES"></canvas><input type="number" id="kmeansTermCriteriaPA" value="0.8" />
  
-<button id="react2pic" onclick="var sourceCanvas=document.getElementById('myres');/*grab the context from your destination canvas*/var destCtx = destinationCanvas.getContext('myresClone');/*call its drawImage() function passing it the source canvas directly*/destCtx.drawImage(sourceCanvas, 0, 0);"></button>
+<button id="react2pic" onclick="var sourceCanvas=document.getElementById('myres');var destinationCanvas=document.getElementsByClassName('WCWC')[0];/*grab the context from your destination canvas*/var destCtx = destinationCanvas.getContext('2d');/*call its drawImage() function passing it the source canvas directly*/destCtx.drawImage(sourceCanvas, 0, 0);">
+move to react!
+</button>
 
  <!--
 
@@ -192,10 +208,11 @@ function App() {
   return (
     <div className="App">
       <div className="realReactApp">
+        <Welcome/>
         <p>################</p>
         <canvas id="myresClone"></canvas>
       </div>
-      <div>
+      <div className="fromOldApp">
         <div className="dpn0">
           {//嚴格遵守順序
           }
