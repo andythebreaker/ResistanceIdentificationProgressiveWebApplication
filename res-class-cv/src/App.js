@@ -1,0 +1,238 @@
+import logo from './logo.svg';
+import './App.css';
+import { useState, useEffect } from "react";
+
+
+function App() {
+  const data = `<p>操作方法-先按一號按鈕-再按Apply按鈕-再regionCrop</p><button id="regionCrop">regionCrop </button><canvas id="SOLUimgPerspectiveTransformation" width="1000" height="690"></canvas>
+  <div class="container" style="display:none;">
+      <div class="o_image" id="background"><img id="sample" src="./bill.png" alt="bill" />
+          <!--span ©reactcodes blog-->
+      </div>
+      <div class="p_image"><canvas id="imageInit"></canvas><canvas id="imageResult"></canvas></div>
+  </div>
+  <div class="b_container"><button id="apply" style="display:none;">Apply</button>
+      <!--https://github.com/reactcodes/crop-perspective-correction-image--><button id="TARGimgPerspectiveTransformation">Apply-imgPerspectiveTransformation</button>
+  </div>
+  <h1 class="splt">EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG</h1>
+  <div class="divFlex divExperiment" style="width:825px; margin-left:auto; margin-right:auto;">
+      <div class="floatLeft"><canvas id="canvasExampleFilters" width="640" height="400"></canvas></div>
+      <div class="floatLeft">
+          <div class="buttonFilter" onclick="clickExampleFiltersGrayScale()">GrayScale</div>
+          <div class="buttonFilter" onclick="clickExampleFiltersBlackAndWhite()">Black and White</div>
+          <div class="buttonFilter" onclick="clickExampleFiltersSepia()">Sepia</div>
+          <div class="buttonFilter" onclick="clickExampleFiltersEmboss()">Emboss</div>
+          <div class="buttonFilter" onclick="clickExampleFiltersHalftone()">Halftone</div>
+          <div class="buttonFilter" onclick="clickExampleFiltersInvertColors()">Invert</div>
+          <div class="buttonFilter" onclick="clickExampleFiltersEdge()">Edge Detection</div>
+          <div class="buttonFilter" onclick="clickExampleFiltersEdge2()">Edge Detection 2</div>
+          <div class="buttonFilter" onclick="clickExampleFiltersCrop()">Crop</div>
+          <div class="buttonFilter" onclick="clickExampleFiltersInvertScale()">Scale</div>
+          <div class="buttonFilter" onclick="clickExampleFiltersReset()">Reset</div>
+      </div>
+  </div>
+  <h1 class="splt">EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG</h1>
+  <div class="divFlex divExperiment" style="width:1188; margin-left:auto; margin-right:auto;">
+      <div class="floatLeft"><canvas id="canvasAutoCrop" width="1000" height="570"></canvas></div>
+      <div class="floatLeft"><button class="buttonFilter" onclick="clickDetectCorners()">1. Detect Corners</button>
+          <div class="buttonFilter justLeaveItAnyway" onclick="clickSelectCropArea()">2. Select Crop Area</div>
+          <div class="buttonFilter justLeaveItAnyway" onclick="clickAutoCropCrop()">3. Crop</div><button class="buttonFilter" onclick="clickAutoCropReset()">Reset</button>
+      </div>
+  </div>
+  <div class="divFlex divExperiment justLeaveItAnyway" style="width:1188; margin-left:auto; margin-right:auto;">
+      <div class="floatLeft"><canvas id="canvasFractals" width="1000" height="570"></canvas></div>
+      <div class="floatLeft">
+          <div class="buttonFilter" onclick="clickFractalDragon()">Dragon</div>
+          <div class="buttonFilter" onclick="clickFractalTree()">Tree</div>
+          <div class="buttonFilter" onclick="clickFractalBarnsleyLeaf()">Barnsley Leaf</div>
+          <div class="buttonFilter" onclick="clickFractalMappleLeaf()">Mapple Leaf</div>
+      </div>
+  </div><button onclick="canvDraw()">canvDraw</button>
+  <table>
+      <thead>
+          <tr>
+              <th>up-left-x</th>
+              <th>up-left-y</th>
+              <th>up-right-x</th>
+              <th>up-right-y</th>
+              <th>down-left-x</th>
+              <th>down-left-y</th>
+              <th>down-right-x</th>
+              <th>down-right-y</th>
+          </tr>
+      </thead>
+      <tbody id="udlrxy"></tbody>
+  </table>
+  <table>
+      <thead>
+          <tr>
+              <th>x座標max</th>
+              <th>y座標max</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td id="xmax"></td>
+              <td id="ymax"></td>
+          </tr>
+      </tbody>
+  </table>
+  <table>
+      <thead>
+          <tr>
+              <th>轉換座標臨界點</th>
+              <th>座標點x</th>
+              <th>座標點y</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>wo</td>
+              <td id="wo_ptx"></td>
+              <td id="wo_pty"></td>
+          </tr>
+          <tr>
+              <td>oh</td>
+              <td id="oh_ptx"></td>
+              <td id="oh_pty"></td>
+          </tr>
+          <tr>
+              <td>wh</td>
+              <td id="wh_ptx"></td>
+              <td id="wh_pty"></td>
+          </tr>
+      </tbody>
+      <tfoot>
+          <td>oo</td>
+          <td id="oo_ptx"></td>
+          <td id="oo_pty"></td>
+      </tfoot>
+  </table>
+  <table>
+      <thead>
+          <tr>
+              <th>角點座標</th>
+              <th id="trig_corner_finish">是否為最邊角</th>
+              <th>00_sqrt_of_sum_of_pow</th>
+              <th>w0_sqrt_of_sum_of_pow</th>
+              <th>0h_sqrt_of_sum_of_pow</th>
+              <th>wh_sqrt_of_sum_of_pow</th>
+          </tr>
+      </thead>
+      <tbody id="mapchart"></tbody>
+      <tfoot>
+          <tr>
+              <td>n/a</td>
+              <td>n/a</td>
+              <td id="00_sqrt_of_sum_of_pow">n/a</td>
+              <td id="w0_sqrt_of_sum_of_pow">n/a</td>
+              <td id="0h_sqrt_of_sum_of_pow">n/a</td>
+              <td id="wh_sqrt_of_sum_of_pow">n/a</td>
+          </tr>
+      </tfoot>
+  </table>
+  <p>X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;XXXXXX&nbsp;&nbsp;&nbsp;XX&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;XXXX&nbsp;&nbsp;</p>
+  <p>X&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;XX&nbsp;&nbsp;XX&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;X&nbsp;&nbsp;XX&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  <p>XXXX&nbsp;&nbsp;&nbsp;X&nbsp;XX&nbsp;X&nbsp;XXXXX&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;X&nbsp;&nbsp;X&nbsp;&nbsp;XXXX&nbsp;&nbsp;</p>
+  <p>X&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XXXXXX&nbsp;X&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;</p>
+  <p>X&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;XX&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;</p>
+  <p>X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;XXXXXX&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;XXXX&nbsp;&nbsp;</p><button id="kmeansButtonDom">kmeansStart </button><canvas id="kmeansRES"></canvas><input type="number" id="kmeansTermCriteriaPA" value="0.8" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.0/algebra.min.js" integrity="sha512-uRz8bf2rMRddlRP1Og3D17oayi+oXNJdQxGzJqGD76gCNs+Q8dZOw9GbsJsW8853vyYxZhxEhfz/IZfelCyxVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="/javascripts/index.js"></script>
+<script type="text/javascript" src="/javascripts/marvin.js"></script>
+<!--<div class="p_image">
+<canvas id="imageInit"></canvas>
+</div>
+<div class="b_container">
+<button id="apply">Apply</button>
+</div>-->
+<script src="./libs/qunit-2.0.1.js" type="text/javascript"></script>
+<script src="utils.js" type="text/javascript"></script>
+<script src="perspective.js" type="text/javascript"></script>
+<script src="./libs/d3.v3.min.js"></script>
+<script src="./libs/numeric-solve.min.js"></script>
+<script src="./index.js"></script>
+<script type="text/javascript" src="/javascripts/TARGimgPerspectiveTransformation.js"></script>
+<script type="text/javascript" src="/javascripts/regionCrop.js"></script>
+<script type="text/javascript" src="/kmeans/index.js"></script>`;
+
+  const status = useScript(
+    "https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.0/algebra.min.js"
+  );
+  return (
+    <div className="App">
+      <div>
+        <div>
+          Script status: <b>{status}</b>
+        </div>
+        {status === "ready" && (
+          <div>
+            <div id="switchFromTraditional" dangerouslySetInnerHTML={{ __html: data }}>
+            </div>
+          </div>
+        )}
+      </div>
+    </div >
+  );
+}
+
+// Hook
+function useScript(src) {
+  // Keep track of script status ("idle", "loading", "ready", "error")
+  const [status, setStatus] = useState(src ? "loading" : "idle");
+  useEffect(
+    () => {
+      // Allow falsy src value if waiting on other data needed for
+      // constructing the script URL passed to this hook.
+      if (!src) {
+        setStatus("idle");
+        return;
+      }
+      // Fetch existing script element by src
+      // It may have been added by another intance of this hook
+      let script = document.querySelector(`script[src="${src}"]`);
+      if (!script) {
+        // Create script
+        script = document.createElement("script");
+        script.src = src;
+        script.async = true;
+        script.setAttribute("data-status", "loading");
+        // Add script to document body
+        document.body.appendChild(script);
+        // Store status in attribute on script
+        // This can be read by other instances of this hook
+        const setAttributeFromEvent = (event) => {
+          script.setAttribute(
+            "data-status",
+            event.type === "load" ? "ready" : "error"
+          );
+        };
+        script.addEventListener("load", setAttributeFromEvent);
+        script.addEventListener("error", setAttributeFromEvent);
+      } else {
+        // Grab existing script status from attribute and set to state.
+        setStatus(script.getAttribute("data-status"));
+      }
+      // Script event handler to update status in state
+      // Note: Even if the script already exists we still need to add
+      // event handlers to update the state for *this* hook instance.
+      const setStateFromEvent = (event) => {
+        setStatus(event.type === "load" ? "ready" : "error");
+      };
+      // Add event listeners
+      script.addEventListener("load", setStateFromEvent);
+      script.addEventListener("error", setStateFromEvent);
+      // Remove event listeners on cleanup
+      return () => {
+        if (script) {
+          script.removeEventListener("load", setStateFromEvent);
+          script.removeEventListener("error", setStateFromEvent);
+        }
+      };
+    },
+    [src] // Only re-run effect if script src changes
+  );
+  return status;
+}
+
+export default App;
