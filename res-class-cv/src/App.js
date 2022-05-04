@@ -2,7 +2,7 @@
 import './App.css'; import './css/old_layout_down.css'; import './css/old_layout_up.css';
 import { useState, useEffect } from "react";
 import { KMeans } from 'scikitjs'
-import { Welcome } from './component/KmeansBtn.jsx'
+import { TableCCall } from './component/TableColorCrecAll.jsx'
 let X = [
   [1, 2, 7],
   [1, 4, 7],
@@ -161,7 +161,15 @@ function App() {
   <p>X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;XXXXXX&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;XXXX&nbsp;&nbsp;</p>
   <button id="kmeansButtonDom">kmeansStart </button><canvas id="kmeansRES"></canvas><input type="number" id="kmeansTermCriteriaPA" value="0.8" />
  
-<button id="react2pic" onclick="var sourceCanvas=document.getElementById('myres');var destinationCanvas=document.getElementsByClassName('WCWC')[0];/*grab the context from your destination canvas*/var destCtx = destinationCanvas.getContext('2d');/*call its drawImage() function passing it the source canvas directly*/destCtx.drawImage(sourceCanvas, 0, 0);">
+  <script>var reactTransImagePathBton_X=function(domFrom,domTo){
+    var sourceCanvas=document.getElementById('myres');
+    var destinationCanvas=document.getElementsByClassName('WCWC')[0];
+    /*grab the context from your destination canvas*/
+    var destCtx = destinationCanvas.getContext('2d');
+    /*call its drawImage() function passing it the source canvas directly*/
+    destCtx.drawImage(sourceCanvas, 0, 0);
+  } </script>
+<!--button id="react2pic" onclick="reactTransImagePathBton(myres,domTo)"-->
 move to react!
 </button>
 
@@ -204,11 +212,12 @@ move to react!
   const status9 = useScript("/javascripts/TARGimgPerspectiveTransformation.js");
   const status10 = useScript("/javascripts/regionCrop.js");
   const status11 = useScript("/kmeans/index.js");
+  const status12=useScript("https://code.jquery.com/jquery-3.6.0.min.js");
 
   return (
     <div className="App">
       <div className="realReactApp">
-        <Welcome/>
+        <TableCCall/>
         <p>################</p>
         <canvas id="myresClone"></canvas>
       </div>
@@ -231,7 +240,7 @@ move to react!
               Script status9: <b>{status9}</b>
               Script status10: <b>{status10}</b>
               Script status11: <b>{status11}</b>
-
+              Script status12: <b>{status12}</b>
               {status0 === "ready" &&
                 status1 === "ready" &&
                 status2 === "ready" &&
@@ -244,6 +253,7 @@ move to react!
                 status9 === "ready" &&
                 status10 === "ready" &&
                 status11 === "ready" &&
+                status12 === "ready" &&
                 (
                   <div>
 
