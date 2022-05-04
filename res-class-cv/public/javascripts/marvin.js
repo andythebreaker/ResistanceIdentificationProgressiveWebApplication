@@ -11,9 +11,18 @@ var imageExampleFilters,
 /**********************************************************************
 * LOADING METHODS
 *********************************************************************/
-
-exampleFilters();
-exampleAutoCrop();
+function checkFlag() {
+  if (typeof MarvinImage === 'undefined') {//https://stackoverflow.com/questions/5113374/javascript-check-if-variable-exists-is-defined-initialized
+    window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds*/
+  } else {
+    /* do something*/
+    exampleFilters();
+    exampleAutoCrop();
+  }
+}
+checkFlag();
+//--exampleFilters();
+//-exampleAutoCrop();
 //exampleFractals();
 
 function example1() {

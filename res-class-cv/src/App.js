@@ -1,10 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+import './App.css'; import './css/old_layout_down.css'; import './css/old_layout_up.css';
 import { useState, useEffect } from "react";
 
 
 function App() {
-  const data = `<p>操作方法-先按一號按鈕-再按Apply按鈕-再regionCrop</p><button id="regionCrop">regionCrop </button><canvas id="SOLUimgPerspectiveTransformation" width="1000" height="690"></canvas>
+  const data = `
+  
+<!--注意:
+
+這是從JADE轉過來的，看branch=>master
+
+-->
+
+  <p>操作方法-先按一號按鈕-再按Apply按鈕-再regionCrop</p><button id="regionCrop">regionCrop </button><canvas id="SOLUimgPerspectiveTransformation" width="1000" height="690"></canvas>
   <div class="container" style="display:none;">
       <div class="o_image" id="background"><img id="sample" src="./bill.png" alt="bill" />
           <!--span ©reactcodes blog-->
@@ -136,16 +144,17 @@ function App() {
   <p>XXXX&nbsp;&nbsp;&nbsp;X&nbsp;XX&nbsp;X&nbsp;XXXXX&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;X&nbsp;&nbsp;X&nbsp;&nbsp;XXXX&nbsp;&nbsp;</p>
   <p>X&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XXXXXX&nbsp;X&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;</p>
   <p>X&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;XX&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;</p>
-  <p>X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;XXXXXX&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;XXXX&nbsp;&nbsp;</p><button id="kmeansButtonDom">kmeansStart </button><canvas id="kmeansRES"></canvas><input type="number" id="kmeansTermCriteriaPA" value="0.8" />
+  <p>X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;XXXXXX&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;XXXX&nbsp;&nbsp;</p>
+  <button id="kmeansButtonDom">kmeansStart </button><canvas id="kmeansRES"></canvas><input type="number" id="kmeansTermCriteriaPA" value="0.8" />
+ 
+<button id="react2pic" onclick="var sourceCanvas=document.getElementById('myres');/*grab the context from your destination canvas*/var destCtx = destinationCanvas.getContext('myresClone');/*call its drawImage() function passing it the source canvas directly*/destCtx.drawImage(sourceCanvas, 0, 0);"></button>
+
+ <!--
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.0/algebra.min.js" integrity="sha512-uRz8bf2rMRddlRP1Og3D17oayi+oXNJdQxGzJqGD76gCNs+Q8dZOw9GbsJsW8853vyYxZhxEhfz/IZfelCyxVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="/javascripts/index.js"></script>
 <script type="text/javascript" src="/javascripts/marvin.js"></script>
-<!--<div class="p_image">
-<canvas id="imageInit"></canvas>
-</div>
-<div class="b_container">
-<button id="apply">Apply</button>
-</div>-->
+
 <script src="./libs/qunit-2.0.1.js" type="text/javascript"></script>
 <script src="utils.js" type="text/javascript"></script>
 <script src="perspective.js" type="text/javascript"></script>
@@ -154,29 +163,87 @@ function App() {
 <script src="./index.js"></script>
 <script type="text/javascript" src="/javascripts/TARGimgPerspectiveTransformation.js"></script>
 <script type="text/javascript" src="/javascripts/regionCrop.js"></script>
-<script type="text/javascript" src="/kmeans/index.js"></script>`;
+<script type="text/javascript" src="/kmeans/index.js"></script>
 
-  const status = useScript(
-    "https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.0/algebra.min.js"
-  );
+-->
+
+<!--<div class="p_image">
+<canvas id="imageInit"></canvas>
+</div>
+<div class="b_container">
+<button id="apply">Apply</button>
+</div>-->
+`;
+
+  const statusN1 = useScript("https://www.marvinj.org/releases/marvinj-0.9.js");
+  const status0 = useScript("https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.0/algebra.min.js");
+  const status1 = useScript("/javascripts/index.js");
+  const status2 = useScript("/javascripts/marvin.js");
+  const status3 = useScript("./libs/qunit-2.0.1.js");
+  const status4 = useScript("utils.js");
+  const status5 = useScript("perspective.js");
+  const status6 = useScript("./libs/d3.v3.min.js");
+  const status7 = useScript("./libs/numeric-solve.min.js");
+  const status8 = useScript("./index.js");
+  const status9 = useScript("/javascripts/TARGimgPerspectiveTransformation.js");
+  const status10 = useScript("/javascripts/regionCrop.js");
+  const status11 = useScript("/kmeans/index.js");
+
   return (
     <div className="App">
+      <div className="realReactApp">
+        <p>################</p>
+        <canvas id="myresClone"></canvas>
+      </div>
       <div>
-        <div>
-          Script status: <b>{status}</b>
-        </div>
-        {status === "ready" && (
-          <div>
-            <div id="switchFromTraditional" dangerouslySetInnerHTML={{ __html: data }}>
+        <div className="dpn0">
+          {//嚴格遵守順序
+          }
+          Script statusN1: <b>{statusN1}</b>
+          {statusN1 === "ready" && (
+            <div className="dpn1">
+              Script status0: <b>{status0}</b>
+              Script status1: <b>{status1}</b>
+              Script status2: <b>{status2}</b>
+              Script status3: <b>{status3}</b>
+              Script status4: <b>{status4}</b>
+              Script status5: <b>{status5}</b>
+              Script status6: <b>{status6}</b>
+              Script status7: <b>{status7}</b>
+              Script status8: <b>{status8}</b>
+              Script status9: <b>{status9}</b>
+              Script status10: <b>{status10}</b>
+              Script status11: <b>{status11}</b>
+
+              {status0 === "ready" &&
+                status1 === "ready" &&
+                status2 === "ready" &&
+                status3 === "ready" &&
+                status4 === "ready" &&
+                status5 === "ready" &&
+                status6 === "ready" &&
+                status7 === "ready" &&
+                status8 === "ready" &&
+                status9 === "ready" &&
+                status10 === "ready" &&
+                status11 === "ready" &&
+                (
+                  <div>
+
+                    <p>這裡面的東西就是已經載入外部JS了</p>
+                  </div>
+                )}
             </div>
-          </div>
-        )}
+          )}    </div>
+      </div>
+      <div id="switchFromTraditional" dangerouslySetInnerHTML={{ __html: data }}>
       </div>
     </div >
   );
 }
 
 // Hook
+//https://usehooks.com/useScript/
 function useScript(src) {
   // Keep track of script status ("idle", "loading", "ready", "error")
   const [status, setStatus] = useState(src ? "loading" : "idle");
