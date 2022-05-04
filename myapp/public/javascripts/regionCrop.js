@@ -16,6 +16,11 @@ document.getElementById('regionCrop').addEventListener('click', function (e) {
     var cropWidth0 = parseInt(income_img_width, 10) * 0.9 * 0.8 / (1.15 + 0.9 + 1.15);
     var cropHeight0 = parseInt(income_img_height, 10) * 6.0 * 0.8 / (6.0 + 8.0 + 8.0);
     var canvas2 = document.getElementById('myres');
+//      _ \  __ \   _ \ __ \   __|\ \   / 
+//     (   | |   |  __/ |   | (    \ \ /  
+//    \___/  .__/ \___|_|  _|\___|  \_/   
+//          _|                            
+//    console.log(cv.getBuildInformation());//ok
     canvas2.width = cropWidth0;
     canvas2.height = cropHeight0;
     var ctx2 = canvas2.getContext('2d');
