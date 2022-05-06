@@ -9,13 +9,13 @@ import Stack from "@mui/material/Stack";
 import Chip from "@mui/material/Chip";
 import { KMeans } from "scikitjs";
 import { PieChart } from "react-minimal-pie-chart";
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 var pixels = require("image-pixels");
 
 export class Welcome extends React.Component {
@@ -105,7 +105,8 @@ export class Welcome extends React.Component {
     var imgurl =
       et.parentNode.parentNode.getElementsByClassName("rtU")[0].innerText;
     async function dokmeansAsync(t) {
-      function howMuchIsRepeated_es6(arr) {
+      function howMuchIsRepeated_es6(arr, colorarray) {
+        //do not reuse
         //https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript
         // count is [ [valX, count], [valY, count], [valZ, count]... ];
         const count = [...new Set(arr)].map((val) => [
@@ -119,10 +120,14 @@ export class Welcome extends React.Component {
           /////////////////////////////
           var tmp_statz = t.state.canvasA;
           tmp_statz["pieDataNum"].push({
-              //TODO:add color to pie chart
+            //TODO:add color to pie chart
             title: count[i][0],
             value: count[i][1],
-            color: "#E38627",
+            color: RGB2HTML(
+              colorarray[i][0],
+              colorarray[i][1],
+              colorarray[i][2]
+            ),
           });
           t.setState({
             canvasA: tmp_statz,
@@ -155,7 +160,18 @@ export class Welcome extends React.Component {
       var kfp = kmean.fitPredict(X);
       kfp.array().then(function (d) {
         console.log(d);
-        howMuchIsRepeated_es6(d.flat());
+        var stk = [];
+        for (let qq = 0; qq < t.state.canvasA.nClustersT; qq++) {
+          stk.push([0, 0, 0]); //init length
+        }
+        X.forEach((element, di) => {
+          //TODO:需要優化!!!
+          stk[d[di]][0] = (element[0] + stk[d[di]][0]) / 2.0;
+          stk[d[di]][1] = (element[1] + stk[d[di]][1]) / 2.0;
+          stk[d[di]][2] = (element[2] + stk[d[di]][2]) / 2.0;
+        });
+        console.log(stk);
+        howMuchIsRepeated_es6(d.flat(), stk);
       });
     }
     dokmeansAsync(this);
@@ -246,10 +262,12 @@ export class Welcome extends React.Component {
                   <TableRow>
                     <TableCell>
                       <Stack direction="row" spacing={1}>
-                        <Chip label="寬" variant="outlined" />
+                        <Chip label="寬" />
                         <Chip label={this.state.canvasA.pixW} />
-                        <Chip label="高" variant="outlined" />
+                        <Chip label="高" />
                         <Chip label={this.state.canvasA.pixH} />
+                        <Chip label="nClusters" />
+                        <Chip label={this.state.canvasA.nClustersT} />
                       </Stack>{" "}
                     </TableCell>
                   </TableRow>
@@ -269,4 +287,17 @@ export class Welcome extends React.Component {
       </table>
     );
   }
+}
+
+function RGB2HTML(red, green, blue) {
+  var rr = Math.round(red);
+  var gg = Math.round(green);
+  var bb = Math.round(blue);
+  var rs = rr.toString(16).length < 2 ? "0" + rr.toString(16) : rr.toString(16);
+  var gs = gg.toString(16).length < 2 ? "0" + gg.toString(16) : gg.toString(16);
+  var bs = bb.toString(16).length < 2 ? "0" + bb.toString(16) : bb.toString(16);
+  console.log(rr,gg,bb);
+  console.log(rr.toString(16),gg.toString(16),bb.toString(16));
+  console.log("#" + rs + gs + bs  );
+  return "#" + rs + gs + bs;
 }
