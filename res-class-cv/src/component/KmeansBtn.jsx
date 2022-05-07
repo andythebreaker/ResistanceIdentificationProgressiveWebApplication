@@ -16,6 +16,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { MyBtnComp } from "./MyBtn.jsx";
+import { ImgStrip } from "./ImageStrip.jsx";
 var pixels = require("image-pixels");
 
 export class Welcome extends React.Component {
@@ -32,6 +34,7 @@ export class Welcome extends React.Component {
         nClustersT: props.nClustersT,
         pieDataNum: [],
       },
+      ystrip: [],
     };
   }
   componentDidMount() {
@@ -46,6 +49,7 @@ export class Welcome extends React.Component {
         nClustersT: this.state.canvasA.nClustersT,
         pieDataNum: [],
       },
+      ystrip: [],
     });
   }
 
@@ -177,6 +181,30 @@ export class Welcome extends React.Component {
     dokmeansAsync(this);
   }
 
+  fucnImgStripDo() {
+    console.log("fucnImgStripDo");
+    for (let i = 0; i < 10; i++) {
+      pixels(
+        this.state.canvasA.canvasURL,
+        {
+          clip: {
+            x: 0,
+            y: i * Math.round(this.state.canvasA.canvasHeight / 10),
+            width: this.state.canvasA.canvasHeight,
+            height: !(i + 1 < 10)
+              ? this.state.canvasA.canvasHeight -
+                i * Math.round(this.state.canvasA.canvasHeight / 10)
+              : Math.round(this.state.canvasA.canvasHeight / 10),
+          },
+        },
+        function (data, width, height) {
+          console.log(data, width, height);
+
+        }
+      );
+    }
+  }
+
   render() {
     return (
       <table>
@@ -257,6 +285,10 @@ export class Welcome extends React.Component {
               </Card>
             </td>
             <td>
+              <MyBtnComp
+                parrentThis={this}
+                showText={<Typography>切割影像長條</Typography>}
+              />
               <Table>
                 <TableBody>
                   <TableRow>
@@ -282,6 +314,14 @@ export class Welcome extends React.Component {
                 </TableBody>
               </Table>
             </td>
+            <td>
+              <Card>
+                <CardContent>
+                  <Typography>Xstrip</Typography>
+                  <Typography>x0</Typography>
+                </CardContent>
+              </Card>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -296,8 +336,8 @@ function RGB2HTML(red, green, blue) {
   var rs = rr.toString(16).length < 2 ? "0" + rr.toString(16) : rr.toString(16);
   var gs = gg.toString(16).length < 2 ? "0" + gg.toString(16) : gg.toString(16);
   var bs = bb.toString(16).length < 2 ? "0" + bb.toString(16) : bb.toString(16);
-  console.log(rr,gg,bb);
-  console.log(rr.toString(16),gg.toString(16),bb.toString(16));
-  console.log("#" + rs + gs + bs  );
+  console.log(rr, gg, bb);
+  console.log(rr.toString(16), gg.toString(16), bb.toString(16));
+  console.log("#" + rs + gs + bs);
   return "#" + rs + gs + bs;
 }
