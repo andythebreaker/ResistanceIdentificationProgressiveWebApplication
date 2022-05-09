@@ -7,7 +7,6 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Chip from "@mui/material/Chip";
-import { KMeans } from "scikitjs";
 import { PieChart } from "react-minimal-pie-chart";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -19,6 +18,10 @@ import Paper from "@mui/material/Paper";
 import { MyBtnComp } from "./MyBtn.jsx";
 import { ImgStrip } from "./ImageStrip.jsx";
 import ReactJson from "react-json-view";
+import {
+  ConvertImageContainingTransparentPrimaryColorsToGroupedClassArray,
+  MatrixStatisticsOccurrences,
+} from "../functionalUnit/ConvertImageContainingTransparentPrimaryColorsToGroupedClassArray.js";
 var pixels = require("image-pixels");
 
 export class Welcome extends React.Component {
@@ -35,32 +38,19 @@ export class Welcome extends React.Component {
         nClustersT: props.nClustersT,
         pieDataNum: [],
       },
-      ystrip: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      ystrip: [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+      ],
     };
-  }
-
-  convertImageContainingTransparentPrimaryColorsToGroupedClassArray(
-    imgData,
-    ct,
-    cb
-  ) {
-    const n = 4;
-    var ceil = Math.ceil;
-    let X = Array.from(Array(ceil(imgData.length / n)), (_, i) =>
-      imgData.slice(i * n, i * n + n - 1)
-    ); //https://stackoverflow.com/questions/8495687/split-array-into-chunks
-    const kmean = new KMeans({ nClusters: ct });
-    var kfp = kmean.fitPredict(X);
-    kfp.array().then(function (d) {
-      cb(d, X);
-    });
-  }
-
-  matrixStatisticsOccurrences(arr) {
-    return [...new Set(arr)].map((val) => [
-      val,
-      arr.join("").split(val).length - 1,
-    ]);
   }
 
   componentDidMount() {
@@ -75,7 +65,18 @@ export class Welcome extends React.Component {
         nClustersT: this.state.canvasA.nClustersT,
         pieDataNum: [],
       },
-      ystrip: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      ystrip: [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+      ],
     });
   }
 
@@ -137,12 +138,7 @@ export class Welcome extends React.Component {
     async function dokmeansAsync(t) {
       function howMuchIsRepeated_es6(arr, colorarray) {
         //do not reuse
-        //https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript
-        // count is [ [valX, count], [valY, count], [valZ, count]... ];
-        const count = [...new Set(arr)].map((val) => [
-          val,
-          arr.join("").split(val).length - 1,
-        ]);
+        var count = MatrixStatisticsOccurrences(arr);
 
         for (let i = 0; i < count.length; i++) {
           console.log(`Value ${count[i][0]} is repeated ${count[i][1]} times`);
@@ -173,7 +169,7 @@ export class Welcome extends React.Component {
       t.setState({
         canvasA: tmp_stat,
       });
-      t.convertImageContainingTransparentPrimaryColorsToGroupedClassArray(
+      ConvertImageContainingTransparentPrimaryColorsToGroupedClassArray(
         data,
         t.state.canvasA.nClustersT,
         (d, X) => {
@@ -199,37 +195,37 @@ export class Welcome extends React.Component {
   fucnImgStripDo() {
     console.log("fucnImgStripDo");
     for (let i = 0; i < 10; i++) {
+      var clipConf = {
+        x: 0,
+        y: i * Math.round(this.state.canvasA.pixH / 10),
+        width: this.state.canvasA.pixW,
+        height: !(i + 1 < 10)
+          ? this.state.canvasA.pixH -
+            i * Math.round(this.state.canvasA.pixH / 10)
+          : Math.round(this.state.canvasA.pixH / 10),
+      };
+      console.log(clipConf);
       pixels(
         this.state.canvasA.canvasURL,
         {
-          clip: {
-            x: 0,
-            y: i * Math.round(this.state.canvasA.canvasHeight / 10),
-            width: this.state.canvasA.canvasHeight,
-            height: !(i + 1 < 10)
-              ? this.state.canvasA.canvasHeight -
-                i * Math.round(this.state.canvasA.canvasHeight / 10)
-              : Math.round(this.state.canvasA.canvasHeight / 10),
-          },
+          clip: clipConf,
         },
-        function (data, width, height) {
-          this.convertImageContainingTransparentPrimaryColorsToGroupedClassArray(
-            data,
-            this.state.canvasA.nClustersT,
+        function (cbp0, cbp) {
+          console.log("條狀", cbp0, cbp.data, cbp.width, cbp.height);
+          ConvertImageContainingTransparentPrimaryColorsToGroupedClassArray(
+            cbp.data,
+            5,
             (d, X) => {
-              console.log(d);
-              var stk = [];
-              for (let qq = 0; qq < t.state.canvasA.nClustersT; qq++) {
-                stk.push([0, 0, 0]); //init length
-              }
-              X.forEach((element, di) => {
-                //TODO:需要優化!!!
-                stk[d[di]][0] = (element[0] + stk[d[di]][0]) / 2.0;
-                stk[d[di]][1] = (element[1] + stk[d[di]][1]) / 2.0;
-                stk[d[di]][2] = (element[2] + stk[d[di]][2]) / 2.0;
+              var countD = MatrixStatisticsOccurrences(d);
+              var arr2 = new Array(countD.length);
+              countD.forEach((el2) => {
+                arr2[el2[0]] = el2[1] || -1; //TODO:這裡因為他的分組有時候會發生分了一組但是這一個一組裡面並沒有任何的元件所以這裡我們在找尋最大的組別的時候會去省略那一些裡面並沒有任何元件的組別但是總的來說這一個分組會產生沒有任何一個人在組別裡面的問題需要被解決
               });
-              console.log(stk);
-              howMuchIsRepeated_es6(d.flat(), stk);
+              console.log(countD, arr2);
+              var max = Math.max(...arr2);
+              //https://bobbyhadz.com/blog/javascript-get-index-of-max-value-in-array
+              var indexMax = arr2.indexOf(max);
+              console.log("這一個長條的顏色是", indexMax);
             }
           );
         }
@@ -349,11 +345,145 @@ export class Welcome extends React.Component {
               </Table>
             </td>
             <td>
-              <ReactJson
-                theme={"monokai"}
-                collapsed={true}
-                src={this.state.ystrip}
-              />
+              <table>
+                <thead>
+                  <tr>
+                    <td>垂直分色</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      style={{
+                        backgroundColor: RGB2HTML(
+                          this.state.ystrip[0][0],
+                          this.state.ystrip[0][1],
+                          this.state.ystrip[0][2]
+                        ),
+                      }}
+                    >
+                      {this.state.ystrip[0]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style={{
+                        backgroundColor: RGB2HTML(
+                          this.state.ystrip[1][0],
+                          this.state.ystrip[1][1],
+                          this.state.ystrip[1][2]
+                        ),
+                      }}
+                    >
+                      {this.state.ystrip[1]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style={{
+                        backgroundColor: RGB2HTML(
+                          this.state.ystrip[2][0],
+                          this.state.ystrip[2][1],
+                          this.state.ystrip[2][2]
+                        ),
+                      }}
+                    >
+                      {this.state.ystrip[2]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style={{
+                        backgroundColor: RGB2HTML(
+                          this.state.ystrip[3][0],
+                          this.state.ystrip[3][1],
+                          this.state.ystrip[3][2]
+                        ),
+                      }}
+                    >
+                      {this.state.ystrip[3]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style={{
+                        backgroundColor: RGB2HTML(
+                          this.state.ystrip[4][0],
+                          this.state.ystrip[4][1],
+                          this.state.ystrip[4][2]
+                        ),
+                      }}
+                    >
+                      {this.state.ystrip[4]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style={{
+                        backgroundColor: RGB2HTML(
+                          this.state.ystrip[5][0],
+                          this.state.ystrip[5][1],
+                          this.state.ystrip[5][2]
+                        ),
+                      }}
+                    >
+                      {this.state.ystrip[5]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style={{
+                        backgroundColor: RGB2HTML(
+                          this.state.ystrip[6][0],
+                          this.state.ystrip[6][1],
+                          this.state.ystrip[6][2]
+                        ),
+                      }}
+                    >
+                      {this.state.ystrip[6]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style={{
+                        backgroundColor: RGB2HTML(
+                          this.state.ystrip[7][0],
+                          this.state.ystrip[7][1],
+                          this.state.ystrip[7][2]
+                        ),
+                      }}
+                    >
+                      {this.state.ystrip[7]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style={{
+                        backgroundColor: RGB2HTML(
+                          this.state.ystrip[8][0],
+                          this.state.ystrip[8][1],
+                          this.state.ystrip[8][2]
+                        ),
+                      }}
+                    >
+                      {this.state.ystrip[8]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style={{
+                        backgroundColor: RGB2HTML(
+                          this.state.ystrip[9][0],
+                          this.state.ystrip[9][1],
+                          this.state.ystrip[9][2]
+                        ),
+                      }}
+                    >
+                      {this.state.ystrip[9]}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </td>
           </tr>
         </tbody>
