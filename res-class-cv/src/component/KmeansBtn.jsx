@@ -22,6 +22,7 @@ import {
   ConvertImageContainingTransparentPrimaryColorsToGroupedClassArray,
   MatrixStatisticsOccurrences,
 } from "../functionalUnit/ConvertImageContainingTransparentPrimaryColorsToGroupedClassArray.js";
+import { RateNct } from "./RateNct.jsx";
 var pixels = require("image-pixels");
 
 export class Welcome extends React.Component {
@@ -51,6 +52,14 @@ export class Welcome extends React.Component {
         [0, 0, 0],
       ],
     };
+  }
+
+  cpcNtc(ntr,lb){
+    var tmp_stat = lb.state.canvasA;
+    tmp_stat["nClustersT"] = ntr;
+    lb.setState({
+      canvasA: tmp_stat,
+    });
   }
 
   componentDidMount() {
@@ -194,6 +203,14 @@ export class Welcome extends React.Component {
 
   fucnImgStripDo() {
     console.log("fucnImgStripDo");
+    var transThis = this;
+    function vStrip(dd, cc) {
+      var tmp_stat = transThis.state.ystrip;
+      tmp_stat[dd] = cc;
+      transThis.setState({
+        ystrip: tmp_stat,
+      });
+    }
     for (let i = 0; i < 10; i++) {
       var clipConf = {
         x: 0,
@@ -205,6 +222,7 @@ export class Welcome extends React.Component {
           : Math.round(this.state.canvasA.pixH / 10),
       };
       console.log(clipConf);
+
       pixels(
         this.state.canvasA.canvasURL,
         {
@@ -226,6 +244,16 @@ export class Welcome extends React.Component {
               //https://bobbyhadz.com/blog/javascript-get-index-of-max-value-in-array
               var indexMax = arr2.indexOf(max);
               console.log("這一個長條的顏色是", indexMax);
+              //TODO演算法進步
+              var avgC = [0, 0, 0];
+              X.forEach((color33, ci) => {
+                if (d[ci] === indexMax) {
+                  avgC[0] = (avgC[0] + color33[0]) / 2;
+                  avgC[1] = (avgC[1] + color33[1]) / 2;
+                  avgC[2] = (avgC[2] + color33[2]) / 2;
+                }
+              });
+              vStrip(i, avgC);
             }
           );
         }
@@ -247,6 +275,7 @@ export class Welcome extends React.Component {
               />
             </td>
             <td>
+              <RateNct nctNrt={this.state.canvasA.nClustersT} cpc={this} />
               <div style={{ transform: "scale(0.1)" }}>
                 <p>width</p>
                 <input
@@ -283,6 +312,11 @@ export class Welcome extends React.Component {
                     padding: "10 0 0 0vh",
                   }}
                   onClick={(e) => {
+                    var tmp_stat = this.state.canvasA;
+                    tmp_stat["pieDataNum"] = [];
+                    this.setState({
+                      canvasA: tmp_stat,
+                    });
                     this.dokmeans(e.target);
                   }}
                 >
@@ -499,8 +533,8 @@ function RGB2HTML(red, green, blue) {
   var rs = rr.toString(16).length < 2 ? "0" + rr.toString(16) : rr.toString(16);
   var gs = gg.toString(16).length < 2 ? "0" + gg.toString(16) : gg.toString(16);
   var bs = bb.toString(16).length < 2 ? "0" + bb.toString(16) : bb.toString(16);
-  console.log(rr, gg, bb);
+  /*console.log(rr, gg, bb);
   console.log(rr.toString(16), gg.toString(16), bb.toString(16));
-  console.log("#" + rs + gs + bs);
+  console.log("#" + rs + gs + bs);*/
   return "#" + rs + gs + bs;
 }
