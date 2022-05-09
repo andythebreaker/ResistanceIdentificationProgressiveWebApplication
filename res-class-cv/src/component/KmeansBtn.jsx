@@ -18,7 +18,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { MyBtnComp } from "./MyBtn.jsx";
 import { ImgStrip } from "./ImageStrip.jsx";
-import ReactJson from 'react-json-view'
+import ReactJson from "react-json-view";
 var pixels = require("image-pixels");
 
 export class Welcome extends React.Component {
@@ -35,9 +35,34 @@ export class Welcome extends React.Component {
         nClustersT: props.nClustersT,
         pieDataNum: [],
       },
-      ystrip: [1,2,3,4,5,6,7,8,9,10],
+      ystrip: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     };
   }
+
+  convertImageContainingTransparentPrimaryColorsToGroupedClassArray(
+    imgData,
+    ct,
+    cb
+  ) {
+    const n = 4;
+    var ceil = Math.ceil;
+    let X = Array.from(Array(ceil(imgData.length / n)), (_, i) =>
+      imgData.slice(i * n, i * n + n - 1)
+    ); //https://stackoverflow.com/questions/8495687/split-array-into-chunks
+    const kmean = new KMeans({ nClusters: ct });
+    var kfp = kmean.fitPredict(X);
+    kfp.array().then(function (d) {
+      cb(d, X);
+    });
+  }
+
+  matrixStatisticsOccurrences(arr) {
+    return [...new Set(arr)].map((val) => [
+      val,
+      arr.join("").split(val).length - 1,
+    ]);
+  }
+
   componentDidMount() {
     console.log("componentDidMount");
     this.setState({
@@ -50,7 +75,7 @@ export class Welcome extends React.Component {
         nClustersT: this.state.canvasA.nClustersT,
         pieDataNum: [],
       },
-      ystrip: [1,2,3,4,5,6,7,8,9,10],
+      ystrip: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     });
   }
 
@@ -148,36 +173,25 @@ export class Welcome extends React.Component {
       t.setState({
         canvasA: tmp_stat,
       });
-      /////////////////////////////////
-      //console.log(Array.from(data));
-      //let X = Array.from(data);
-      const n = 4;
-      var ceil = Math.ceil;
-      let X = Array.from(Array(ceil(data.length / n)), (_, i) =>
-        data.slice(i * n, i * n + n - 1)
-      ); //https://stackoverflow.com/questions/8495687/split-array-into-chunks
-      console.log(X);
-      /*arr1 = [[1, 2], [3, 4]];
-      [ [ 1, 2 ], [ 3, 4 ] ]
-      > arr1.flat();
-      [ 1, 2, 3, 4 ]*/
-      const kmean = new KMeans({ nClusters: t.state.canvasA.nClustersT });
-      var kfp = kmean.fitPredict(X);
-      kfp.array().then(function (d) {
-        console.log(d);
-        var stk = [];
-        for (let qq = 0; qq < t.state.canvasA.nClustersT; qq++) {
-          stk.push([0, 0, 0]); //init length
+      t.convertImageContainingTransparentPrimaryColorsToGroupedClassArray(
+        data,
+        t.state.canvasA.nClustersT,
+        (d, X) => {
+          console.log(d);
+          var stk = [];
+          for (let qq = 0; qq < t.state.canvasA.nClustersT; qq++) {
+            stk.push([0, 0, 0]); //init length
+          }
+          X.forEach((element, di) => {
+            //TODO:需要優化!!!
+            stk[d[di]][0] = (element[0] + stk[d[di]][0]) / 2.0;
+            stk[d[di]][1] = (element[1] + stk[d[di]][1]) / 2.0;
+            stk[d[di]][2] = (element[2] + stk[d[di]][2]) / 2.0;
+          });
+          console.log(stk);
+          howMuchIsRepeated_es6(d.flat(), stk);
         }
-        X.forEach((element, di) => {
-          //TODO:需要優化!!!
-          stk[d[di]][0] = (element[0] + stk[d[di]][0]) / 2.0;
-          stk[d[di]][1] = (element[1] + stk[d[di]][1]) / 2.0;
-          stk[d[di]][2] = (element[2] + stk[d[di]][2]) / 2.0;
-        });
-        console.log(stk);
-        howMuchIsRepeated_es6(d.flat(), stk);
-      });
+      );
     }
     dokmeansAsync(this);
   }
@@ -199,18 +213,28 @@ export class Welcome extends React.Component {
           },
         },
         function (data, width, height) {
-          console.log(data, width, height);
-          /*var tmp_stat = this.state.ystrip;
-          tmp_stat[i] = {data: data, width: width, height: height};
-          this.setState({
-            ystrip: tmp_stat,
-          });*/
+          this.convertImageContainingTransparentPrimaryColorsToGroupedClassArray(
+            data,
+            this.state.canvasA.nClustersT,
+            (d, X) => {
+              console.log(d);
+              var stk = [];
+              for (let qq = 0; qq < t.state.canvasA.nClustersT; qq++) {
+                stk.push([0, 0, 0]); //init length
+              }
+              X.forEach((element, di) => {
+                //TODO:需要優化!!!
+                stk[d[di]][0] = (element[0] + stk[d[di]][0]) / 2.0;
+                stk[d[di]][1] = (element[1] + stk[d[di]][1]) / 2.0;
+                stk[d[di]][2] = (element[2] + stk[d[di]][2]) / 2.0;
+              });
+              console.log(stk);
+              howMuchIsRepeated_es6(d.flat(), stk);
+            }
+          );
         }
       );
     }
-  }
-  convertImageContainingTransparentPrimaryColorsToGroupedClassArray(imgData,ct,cb){
-
   }
 
   render() {
@@ -226,31 +250,33 @@ export class Welcome extends React.Component {
                 height={this.state.canvasA.canvasHeight}
               />
             </td>
-            <td><div style={{transform: 'scale(0.1)'}}>
-              <p>width</p>
-              <input
-                type="number"
-                value={this.state.canvasA.canvasWidth}
-                onChange={(e) => {
-                  this.onchangeW(e.target);
-                }}
-              />
-              <p>height</p>
-              <input
-                type="number"
-                value={this.state.canvasA.canvasHeight}
-                onChange={(e) => {
-                  this.onchangeH(e.target);
-                }}
-              />
-              <input
-                className="reactTransImagePath"
-                type="text"
-                value={this.state.canvasA.canvasURL}
-                onChange={(e) => {
-                  this.onchangeURL(e.target);
-                }}
-              /></div>
+            <td>
+              <div style={{ transform: "scale(0.1)" }}>
+                <p>width</p>
+                <input
+                  type="number"
+                  value={this.state.canvasA.canvasWidth}
+                  onChange={(e) => {
+                    this.onchangeW(e.target);
+                  }}
+                />
+                <p>height</p>
+                <input
+                  type="number"
+                  value={this.state.canvasA.canvasHeight}
+                  onChange={(e) => {
+                    this.onchangeH(e.target);
+                  }}
+                />
+                <input
+                  className="reactTransImagePath"
+                  type="text"
+                  value={this.state.canvasA.canvasURL}
+                  onChange={(e) => {
+                    this.onchangeURL(e.target);
+                  }}
+                />
+              </div>
               <Stack spacing={2} direction="row">
                 <Button
                   color="secondary"
@@ -323,10 +349,11 @@ export class Welcome extends React.Component {
               </Table>
             </td>
             <td>
-            <ReactJson 
-            theme={"monokai"}
-            collapsed={true}
-            src={this.state.ystrip} />
+              <ReactJson
+                theme={"monokai"}
+                collapsed={true}
+                src={this.state.ystrip}
+              />
             </td>
           </tr>
         </tbody>
