@@ -18,6 +18,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { MyBtnComp } from "./MyBtn.jsx";
 import { ImgStrip } from "./ImageStrip.jsx";
+import ReactJson from 'react-json-view'
 var pixels = require("image-pixels");
 
 export class Welcome extends React.Component {
@@ -34,7 +35,7 @@ export class Welcome extends React.Component {
         nClustersT: props.nClustersT,
         pieDataNum: [],
       },
-      ystrip: [],
+      ystrip: [1,2,3,4,5,6,7,8,9,10],
     };
   }
   componentDidMount() {
@@ -49,7 +50,7 @@ export class Welcome extends React.Component {
         nClustersT: this.state.canvasA.nClustersT,
         pieDataNum: [],
       },
-      ystrip: [],
+      ystrip: [1,2,3,4,5,6,7,8,9,10],
     });
   }
 
@@ -199,10 +200,17 @@ export class Welcome extends React.Component {
         },
         function (data, width, height) {
           console.log(data, width, height);
-
+          /*var tmp_stat = this.state.ystrip;
+          tmp_stat[i] = {data: data, width: width, height: height};
+          this.setState({
+            ystrip: tmp_stat,
+          });*/
         }
       );
     }
+  }
+  convertImageContainingTransparentPrimaryColorsToGroupedClassArray(imgData,ct,cb){
+
   }
 
   render() {
@@ -218,7 +226,7 @@ export class Welcome extends React.Component {
                 height={this.state.canvasA.canvasHeight}
               />
             </td>
-            <td>
+            <td><div style={{transform: 'scale(0.1)'}}>
               <p>width</p>
               <input
                 type="number"
@@ -242,7 +250,7 @@ export class Welcome extends React.Component {
                 onChange={(e) => {
                   this.onchangeURL(e.target);
                 }}
-              />
+              /></div>
               <Stack spacing={2} direction="row">
                 <Button
                   color="secondary"
@@ -315,12 +323,10 @@ export class Welcome extends React.Component {
               </Table>
             </td>
             <td>
-              <Card>
-                <CardContent>
-                  <Typography>Xstrip</Typography>
-                  <Typography>x0</Typography>
-                </CardContent>
-              </Card>
+            <ReactJson 
+            theme={"monokai"}
+            collapsed={true}
+            src={this.state.ystrip} />
             </td>
           </tr>
         </tbody>
