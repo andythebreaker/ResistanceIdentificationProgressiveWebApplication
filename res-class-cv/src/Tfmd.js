@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import MagicDropzone from "react-magic-dropzone";
+import { ci } from 'case-insensitive';
+import Webcam from "react-webcam";
 
 import "./styles.css";
 const tf = require('@tensorflow/tfjs');
@@ -19,7 +21,12 @@ const names = ["Black",
   "White",
   "Gold",
   "Silver"
-]
+];
+
+const videoConstraints = {
+  width: 1280,
+  height: 720,
+};
 
 export class Tfmd extends React.Component {
   state = {
@@ -37,7 +44,7 @@ export class Tfmd extends React.Component {
   }
 
   onDrop = (accepted, rejected, links) => {
-    console.log(accepted,links);
+    console.log(accepted, links);
     this.setState({ preview: accepted[0].preview || links[0] });
   };
 
@@ -69,9 +76,17 @@ export class Tfmd extends React.Component {
   };
 
   onImageChange = e => {
-    const c = document.getElementById("canvas");
-    const ctx = c.getContext("2d");
+    var c = null;
+    var ctx = null;
+    //if (ci(e.target.tagName).equals('IMG')) {
+    c = document.getElementById("canvas");
+    ctx = c.getContext("2d");
     this.cropToCanvas(e.target, c, ctx);
+    //} else {
+    //  c = document.getElementById("canvas");
+    //   ctx = c.getContext("2d");
+    //  console.log(e.target.tagName)
+    // }
     let [modelWidth, modelHeight] = this.state.model.inputs[0].shape.slice(1, 3);
     const input = tf.tidy(() => {
       return tf.image.resizeBilinear(tf.browser.fromPixels(c), [modelWidth, modelHeight])
@@ -132,29 +147,50 @@ export class Tfmd extends React.Component {
 
   render() {
     return (
-      <div className="Dropzone-page">
-        {this.state.model ? (
-          <MagicDropzone
-            className="Dropzone"
-            accept="image/jpeg, image/png, .jpg, .jpeg, .png"
-            multiple={false}
-            onDrop={this.onDrop}
-          >
-            {this.state.preview ? (
-              <img
-                alt="upload preview"
-                onLoad={this.onImageChange}
-                className="Dropzone-img"
-                src={this.state.preview}
-              />
-            ) : (
-              "Choose or drop a file."
-            )}
-            <canvas id="canvas" width="640" height="640" />
-          </MagicDropzone>
-        ) : (
-          <div className="Dropzone">Loading model...</div>
-        )}
+      <div className="CamPlusTf">
+        <Webcam
+          audio={false}
+          height={720}
+          screenshotFormat="image/jpeg"
+          width={1280}
+          videoConstraints={videoConstraints}
+        >
+          {({ getScreenshot }) => (
+            <button
+              onClick={() => {
+                const imageSrc = getScreenshot();
+                //console.log(imageSrc);
+                this.setState({ preview: imageSrc });
+              }}
+            >
+              Capture photo
+            </button>
+          )}
+        </Webcam>
+        <div className="Dropzone-page">
+          {this.state.model ? (
+            <MagicDropzone
+              className="Dropzone"
+              accept="image/jpeg, image/png, .jpg, .jpeg, .png"
+              multiple={false}
+              onDrop={this.onDrop}
+            >
+              {this.state.preview ? (
+                <img
+                  alt="upload preview"
+                  onLoad={this.onImageChange}
+                  className="Dropzone-img"
+                  src={this.state.preview}
+                />
+              ) : (
+                "Choose or drop a file."
+              )}
+              <canvas id="canvas" width="640" height="640" />
+            </MagicDropzone>
+          ) : (
+            <div className="Dropzone">Loading model...</div>
+          )}
+        </div>
       </div>
     );
   }
