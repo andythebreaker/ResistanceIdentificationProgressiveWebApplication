@@ -5,7 +5,7 @@ export function ConvertImageContainingTransparentPrimaryColorsToGroupedClassArra
     ct,
     cb
 ) {
-    console.log(imgData);
+    //console.log(imgData);
     const n = 4;
     var ceil = Math.ceil;
     let X = Array.from(Array(ceil(imgData.length / n)), (_, i) =>

@@ -23,6 +23,7 @@ import {
   MatrixStatisticsOccurrences,
 } from "../functionalUnit/ConvertImageContainingTransparentPrimaryColorsToGroupedClassArray.js";
 import { RateNct } from "./RateNct.jsx";
+import HorizontalScroll from "react-horizontal-scrolling";
 var pixels = require("image-pixels");
 
 export class Welcome extends React.Component {
@@ -51,10 +52,11 @@ export class Welcome extends React.Component {
         [0, 0, 0],
         [0, 0, 0],
       ],
+      xstrip: new Array(45),
     };
   }
 
-  cpcNtc(ntr,lb){
+  cpcNtc(ntr, lb) {
     var tmp_stat = lb.state.canvasA;
     tmp_stat["nClustersT"] = ntr;
     lb.setState({
@@ -86,6 +88,7 @@ export class Welcome extends React.Component {
         [0, 0, 0],
         [0, 0, 0],
       ],
+      xstrip: new Array(45),
     });
   }
 
@@ -235,7 +238,66 @@ export class Welcome extends React.Component {
             5,
             (d, X) => {
               var countD = MatrixStatisticsOccurrences(d);
-              var arr2 = new Array(countD.length);
+              var arr2 = newArrayWithValue(0, countD.length);
+              countD.forEach((el2) => {
+                arr2[el2[0]] = el2[1] || -1; //TODO:這裡因為他的分組有時候會發生分了一組但是這一個一組裡面並沒有任何的元件所以這裡我們在找尋最大的組別的時候會去省略那一些裡面並沒有任何元件的組別但是總的來說這一個分組會產生沒有任何一個人在組別裡面的問題需要被解決
+              });
+              console.log(countD, arr2);
+              var max = Math.max(...arr2);
+              //https://bobbyhadz.com/blog/javascript-get-index-of-max-value-in-array
+              var indexMax = arr2.indexOf(max);
+              console.log("這一個長條的顏色是", indexMax);
+              //TODO演算法進步
+              var avgC = [0, 0, 0];
+              X.forEach((color33, ci) => {
+                if (d[ci] === indexMax) {
+                  avgC[0] = (avgC[0] + color33[0]) / 2;
+                  avgC[1] = (avgC[1] + color33[1]) / 2;
+                  avgC[2] = (avgC[2] + color33[2]) / 2;
+                }
+              });
+              vStrip(i, avgC);
+            }
+          );
+        }
+      );
+    }
+  }
+
+  fucnImgStripHZ() {
+    var transThis = this;
+    function vStrip(dd, cc) {
+      var tmp_stat = transThis.state.xstrip;
+      tmp_stat[dd] = cc;
+      transThis.setState({
+        xstrip: tmp_stat,
+      });
+    }
+    for (let i = 0; i < 45; i++) {
+      var clipConf = {
+        x: i * Math.round(this.state.canvasA.pixW / 45),
+        y: this.state.canvasA.pixH * (4.0 / 10.0),
+        width: !(i + 1 < 45)
+          ? this.state.canvasA.pixW -
+            i * Math.round(this.state.canvasA.pixW / 45)
+          : Math.round(this.state.canvasA.pixW / 45),
+        height: this.state.canvasA.pixH * (2.0 / 10.0),
+      };
+      console.log(clipConf);
+
+      pixels(
+        this.state.canvasA.canvasURL,
+        {
+          clip: clipConf,
+        },
+        function (cbp0, cbp) {
+          //console.log("條狀", cbp0, cbp.data, cbp.width, cbp.height);
+          ConvertImageContainingTransparentPrimaryColorsToGroupedClassArray(
+            cbp.data,
+            14,
+            (d, X) => {
+              var countD = MatrixStatisticsOccurrences(d);
+              var arr2 = newArrayWithValue(0, countD.length);
               countD.forEach((el2) => {
                 arr2[el2[0]] = el2[1] || -1; //TODO:這裡因為他的分組有時候會發生分了一組但是這一個一組裡面並沒有任何的元件所以這裡我們在找尋最大的組別的時候會去省略那一些裡面並沒有任何元件的組別但是總的來說這一個分組會產生沒有任何一個人在組別裡面的問題需要被解決
               });
@@ -262,6 +324,13 @@ export class Welcome extends React.Component {
   }
 
   render() {
+    let listsHZ = this.state.xstrip.map(function (l, i) {
+      return (
+        <td key={i} style={{ backgroundColor: RGB2HTML(l[0], l[1], l[2]) }}>
+          <h6 style={{ transform: "rotate(-90deg)", width: "1vw" }}>{l}</h6>
+        </td>
+      );
+    });
     return (
       <table>
         <tbody>
@@ -352,6 +421,12 @@ export class Welcome extends React.Component {
               <MyBtnComp
                 parrentThis={this}
                 showText={<Typography>切割影像長條</Typography>}
+                fucnSelect="vt"
+              />
+              <MyBtnComp
+                parrentThis={this}
+                showText={<Typography>切割水平影像</Typography>}
+                fucnSelect="hz"
               />
               <Table>
                 <TableBody>
@@ -519,6 +594,16 @@ export class Welcome extends React.Component {
                 </tbody>
               </table>
             </td>
+            <td>
+              <h6>水平切割</h6>
+              <HorizontalScroll>
+                <table>
+                  <tbody>
+                    <tr>{listsHZ}</tr>
+                  </tbody>
+                </table>
+              </HorizontalScroll>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -537,4 +622,11 @@ function RGB2HTML(red, green, blue) {
   console.log(rr.toString(16), gg.toString(16), bb.toString(16));
   console.log("#" + rs + gs + bs);*/
   return "#" + rs + gs + bs;
+}
+
+function newArrayWithValue(valueTarget, arrayLength) {
+  //https://stackoverflow.com/questions/2044760/default-array-values
+  var tmp = [];
+  while (arrayLength) tmp[--arrayLength] = valueTarget;
+  return tmp;
 }

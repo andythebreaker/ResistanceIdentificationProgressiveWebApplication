@@ -2,13 +2,29 @@
 import React from "react";
 import ReactiveButton from 'reactive-button';
 import { useState } from 'react';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 export function MyBtnComp(props) {
   const [state, setState] = useState('idle');
-
+  const MySwal = withReactContent(Swal)
   const onClickHandler = (e) => {
     console.log(e);
-    props.parrentThis.fucnImgStripDo();
+    if(props.fucnSelect==='vt'){
+      props.parrentThis.fucnImgStripDo();
+    }else if(props.fucnSelect==='hz'){
+      props.parrentThis.fucnImgStripHZ();
+    }else{
+      MySwal.fire({
+        title: <p>error</p>,
+        didOpen: () => {
+          // `MySwal` is a subclass of `Swal` with all the same instance & static methods
+          MySwal.showLoading()
+        },
+      }).then(() => {
+        return MySwal.fire(<p>vt/zh</p>)
+      });
+    }
   };
   return <div className="myBtnComp">
     <ReactiveButton buttonState={state}
