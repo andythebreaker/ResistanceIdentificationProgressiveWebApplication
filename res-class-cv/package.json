@@ -11,7 +11,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "file:node_modules/bootstrap",
+    "bootstrap": "*",
     "case-insensitive": "^1.0.0",
     "gh-pages": "^4.0.0",
     "gm": "^1.23.1",
@@ -23,7 +23,7 @@
     "react": "^18.1.0",
     "react-app-polyfill": "^3.0.0",
     "react-app-rewired": "^2.2.1",
-    "react-bootstrap": "file:node_modules/react-bootstrap",
+    "react-bootstrap": "*",
     "react-dom": "^18.1.0",
     "react-horizontal-scrolling": "^0.1.8",
     "react-jimp": "^1.1.7",
@@ -43,7 +43,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=18007 && react-scripts start",
+    "start": "PORT=18877 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

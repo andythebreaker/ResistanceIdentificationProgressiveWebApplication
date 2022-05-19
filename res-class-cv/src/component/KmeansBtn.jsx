@@ -24,6 +24,9 @@ import {
 } from "../functionalUnit/ConvertImageContainingTransparentPrimaryColorsToGroupedClassArray.js";
 import { RateNct } from "./RateNct.jsx";
 import HorizontalScroll from "react-horizontal-scrolling";
+import * as tf from '@tensorflow/tfjs'
+import * as sk from 'scikitjs'
+sk.setBackend(tf)
 var pixels = require("image-pixels");
 
 export class Welcome extends React.Component {
