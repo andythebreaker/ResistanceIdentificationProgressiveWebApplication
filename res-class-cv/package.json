@@ -47,7 +47,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "semantic-ui-css-patch"
+    "postinstall": "semantic-ui-css-patch && wget -O ./public/postInstall/opencv.js https://docs.opencv.org/4.5.0/opencv.js"
   },
   "eslintConfig": {
     "extends": [
