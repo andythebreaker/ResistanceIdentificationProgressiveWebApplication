@@ -5,12 +5,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Tfmd } from "./Tfmd.js";
+import "./css/backtotop.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
     <Tfmd />
+    <button type="button" id="BackTop" className="toTop-arrow">pla</button>
   </React.StrictMode>
 );
 
