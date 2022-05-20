@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import MagicDropzone from "react-magic-dropzone";
 import { ci } from 'case-insensitive';
-import Webcam from "react-webcam";
 
 import "./styles.css";
 const tf = require('@tensorflow/tfjs');
@@ -23,11 +22,6 @@ const names = ["Black",
   "Silver"
 ];
 
-const videoConstraints = {
-  width: 1280,
-  height: 720,
-};
-
 export class Tfmd extends React.Component {
   state = {
     model: null,
@@ -36,7 +30,8 @@ export class Tfmd extends React.Component {
   };
 
   componentDidMount() {
-    tf.loadGraphModel(weights).then(model => {
+
+    tf.loadGraphModel("/ftmdg/"+this.props.ftmdg+weights).then(model => {
       this.setState({
         model: model
       });
@@ -148,25 +143,13 @@ export class Tfmd extends React.Component {
   render() {
     return (
       <div className="CamPlusTf">
-        <Webcam
-          audio={false}
-          height={720}
-          screenshotFormat="image/jpeg"
-          width={1280}
-          videoConstraints={videoConstraints}
-        >
-          {({ getScreenshot }) => (
-            <button
-              onClick={() => {
-                const imageSrc = getScreenshot();
-                //console.log(imageSrc);
-                this.setState({ preview: imageSrc });
-              }}
-            >
-              Capture photo
-            </button>
-          )}
-        </Webcam>
+        <h3>{this.props.ftmdg}</h3>
+        <button onClick={() => {
+          var rii = document.getElementsByClassName('WCWC')[1];
+          var riiurl = rii.toDataURL('image/jpeg');
+          console.log(riiurl);
+          this.setState({ preview: riiurl });
+        }}>TTTF</button>
         <div className="Dropzone-page">
           {this.state.model ? (
             <MagicDropzone
