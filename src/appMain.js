@@ -1,15 +1,16 @@
 import React, { Component, useState } from "react";
-import './index.css';
 import AppSubMain from './AppSubMain';
 import { Tfmd } from "./Tfmd.js";
 import {BackToTop} from "./component/backtotop.jsx"
 import "./css/backtotop.css";
 import Webcam from "react-webcam";
+import "./css/appMain.css"
 
 const videoConstraints = {
   width: 1280,
   height: 720,
 };
+//videoConstraints={videoConstraints}
 export class AppMain extends React.Component {
 
   componentDidMount() {
@@ -19,14 +20,13 @@ export class AppMain extends React.Component {
   }
 
   render() {
-    return (<div>
+    return (<div className="fullpage">
       <AppSubMain />
       <Webcam
         audio={false}
         height={720}
         screenshotFormat="image/jpeg"
         width={1280}
-        videoConstraints={videoConstraints}
       >
         {({ getScreenshot }) => (
           <button
