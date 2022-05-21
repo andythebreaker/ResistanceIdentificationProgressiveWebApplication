@@ -74,7 +74,8 @@ export class Tfmd extends React.Component {
     var c = null;
     var ctx = null;
     //if (ci(e.target.tagName).equals('IMG')) {
-    c = document.getElementById("canvas");
+    //c = document.getElementById("canvas");
+    c=this.canvasB;//TODO:check this
     ctx = c.getContext("2d");
     this.cropToCanvas(e.target, c, ctx);
     //} else {
@@ -168,7 +169,8 @@ export class Tfmd extends React.Component {
               ) : (
                 "Choose or drop a file."
               )}
-              <canvas id="canvas" width="640" height="640" />
+              <canvas id="canvas" width="640" height="640" 
+              ref={(canvasB) => (this.canvasB = canvasB)}/>
             </MagicDropzone>
           ) : (
             <div className="Dropzone">Loading model...</div>
