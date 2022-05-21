@@ -3,6 +3,7 @@ import './App.css'; import './css/old_layout_down.css'; import './css/old_layout
 import { useState, useEffect } from "react";
 import { KMeans } from 'scikitjs'
 import { TableCCall } from './component/TableColorCrecAll.jsx'
+import { UiPhone } from './component/UiPhone.jsx'
 let X = [
   [1, 2, 7],
   [1, 4, 7],
@@ -17,7 +18,7 @@ kfp.array().then(function (d) { console.log(d) });
 find out what is diff between fitPredict and fit???????????
 */
 
-function App() {
+function AppSubMain() {
   const data = `
   
 <!--注意:
@@ -212,12 +213,13 @@ move to react!
   const status9 = useScript("/javascripts/TARGimgPerspectiveTransformation.js");
   const status10 = useScript("/javascripts/regionCrop.js");
   const status11 = useScript("/kmeans/index.js");
-  const status12=useScript("https://code.jquery.com/jquery-3.6.0.min.js");
+  const status12 = useScript("https://code.jquery.com/jquery-3.6.0.min.js");
+  const status13 = useScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.5/swiper-bundle.min.js");
 
   return (
     <div className="App">
       <div className="realReactApp">
-        <TableCCall/>
+        <TableCCall />
         <p>################</p>
         <canvas id="myresClone"></canvas>
       </div>
@@ -241,6 +243,7 @@ move to react!
               Script status10: <b>{status10}</b>
               Script status11: <b>{status11}</b>
               Script status12: <b>{status12}</b>
+              Script status13: <b>{status13}</b>
               {status0 === "ready" &&
                 status1 === "ready" &&
                 status2 === "ready" &&
@@ -254,10 +257,11 @@ move to react!
                 status10 === "ready" &&
                 status11 === "ready" &&
                 status12 === "ready" &&
+                status13 === "ready" &&
                 (
                   <div>
-
                     <p>這裡面的東西就是已經載入外部JS了</p>
+                    <UiPhone />
                   </div>
                 )}
             </div>
@@ -329,4 +333,4 @@ function useScript(src) {
   return status;
 }
 
-export default App;
+export default AppSubMain;
