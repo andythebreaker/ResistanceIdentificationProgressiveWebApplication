@@ -11,6 +11,13 @@ const videoConstraints = {
   height: 720,
 };
 export class AppMain extends React.Component {
+
+  componentDidMount() {
+    console.log("AppMain.componentDidMount");
+    //var mainuiwindows=document.getElementsByClassName("Sw222")[0];//you can only have one of this!!!
+    //console.log(mainuiwindows);
+  }
+
   render() {
     return (<div>
       <AppSubMain />

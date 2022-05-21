@@ -3,7 +3,18 @@ import { Rating, Message } from "semantic-ui-react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 const MySwal = withReactContent(Swal);
+var globHadTrig = false;
 export class UiPhone extends React.Component {
+  componentDidMount() {
+    //console.log("AppMain.componentDidMount");
+    var mainuiwindows = document.getElementsByClassName("Sw222")[0]; //you can only have one of this!!!
+    console.log(mainuiwindows);
+    if (!globHadTrig) {
+      globHadTrig = true;
+      mainuiwindows.click();
+    }
+  }
+
   render() {
     return (
       <div>
@@ -268,13 +279,15 @@ export class UiPhone extends React.Component {
                     </div>
                   </div>
                   <div class="vizor"></div>
-                <button id="not_react_comp_time_swipe_init" style="display:none;" onclick="var defaults = {pagination: '.swiper-pagination',slidesPerView: 3,freeMode: true,freeModeSticky: true,freeModeMomentumRatio: 0.25,freeModeVelocityRatio: 0.25,freeModeMinimumVelocity: 0.1,mousewheelControl: true,mousewheelSensitivity: 0.5,loop: true,loopAdditionalSlides: 5,direction: 'vertical',slideToClickedSlide: true,centeredSlides: true};var swiper1 = new Swiper('.swiper-container.hours', Object.assign({}, defaults, { initialSlide: 13}));var swiper2 = new Swiper('.swiper-container.minutes',Object.assign({}, defaults, { initialSlide: 37}));var swiper3 = new Swiper('.swiper-container.seconds', defaults);console.log('into swipe');"></button>
+                <button id="not_react_comp_time_swipe_init" style="display:none;" onclick="swipeadd()"></button>
                 </div>
                 `,
               showCloseButton: true,
               didOpen: () => {
                 // `MySwal` is a subclass of `Swal` with all the same instance & static methods
-                document.getElementById('not_react_comp_time_swipe_init').click();
+                document
+                  .getElementById("not_react_comp_time_swipe_init")
+                  .click();
                 MySwal.showLoading();
               },
             }).then(() => {

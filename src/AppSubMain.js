@@ -215,6 +215,7 @@ move to react!
   const status11 = useScript("/kmeans/index.js");
   const status12 = useScript("https://code.jquery.com/jquery-3.6.0.min.js");
   const status13 = useScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.5/swiper-bundle.min.js");
+  const status14= useScript("./addjsfuc/swipeadd.js");
 
   return (
     <div className="App">
@@ -244,6 +245,7 @@ move to react!
               Script status11: <b>{status11}</b>
               Script status12: <b>{status12}</b>
               Script status13: <b>{status13}</b>
+              Script status14: <b>{status14}</b>
               {status0 === "ready" &&
                 status1 === "ready" &&
                 status2 === "ready" &&
@@ -258,6 +260,7 @@ move to react!
                 status11 === "ready" &&
                 status12 === "ready" &&
                 status13 === "ready" &&
+                status14 === "ready" &&
                 (
                   <div>
                     <p>這裡面的東西就是已經載入外部JS了</p>
