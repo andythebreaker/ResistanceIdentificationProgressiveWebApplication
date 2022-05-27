@@ -16,10 +16,10 @@
 
 |ver|node|
 |--|--|
-|10|17.90|
+|10|17.9.0|
 
 `"start": "PORT=18877 react-scripts start",`
 
-`yarn install`??
+`npm install` : ok
 
-`npm start`??
+`npm start` : ok
