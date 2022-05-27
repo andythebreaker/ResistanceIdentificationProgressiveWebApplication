@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "@mui/material/Box";
+//import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -11,13 +11,13 @@ import { PieChart } from "react-minimal-pie-chart";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
+//import TableContainer from "@mui/material/TableContainer";
+//import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+//import Paper from "@mui/material/Paper";
 import { MyBtnComp } from "./MyBtn.jsx";
-import { ImgStrip } from "./ImageStrip.jsx";
-import ReactJson from "react-json-view";
+//import { ImgStrip } from "./ImageStrip.jsx";
+//import ReactJson from "react-json-view";
 import {
   ConvertImageContainingTransparentPrimaryColorsToGroupedClassArray,
   MatrixStatisticsOccurrences,

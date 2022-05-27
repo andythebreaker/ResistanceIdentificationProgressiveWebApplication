@@ -1,5 +1,5 @@
-import React, { Component, useState } from "react";
-import { Rating, Message } from "semantic-ui-react";
+import React/*, { Component, useState }*/ from "react";
+//import { Rating, Message } from "semantic-ui-react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import "./../css/swp.css"
@@ -24,7 +24,7 @@ export class UiPhone extends React.Component {
           className="Sw222"
           onClick={() => {
             MySwal.fire({
-              title: <p>Hello World</p>,
+              title: <p>teststring</p>,
               html: `<h6 class="TimepickerusingSwiperjs">{"L0":4,"L0":8,"L0":7,"L0":10}</h6>
                 <div class="picker arrows">
                   <div class="swiper-container hours">

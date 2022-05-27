@@ -1,9 +1,9 @@
-import React, { Component ,useState} from "react";
+import React, { /*Component ,*/useState} from "react";
 import { Welcome } from './KmeansBtn.jsx';
-import { Rating ,Message} from 'semantic-ui-react';
+import {/* Rating ,*/Message} from 'semantic-ui-react';
 
 export function TableCCall(props) {
-  const [nct, setNct] = useState([5,8,3,3,3,3,3,3,3,3,3,3,3,3]);
+  const [/*nct*/, /*setNct*/] = useState([5,8,3,3,3,3,3,3,3,3,3,3,3,3]);
   return <div className="tableCC">
     <table className="table table-striped table-bordered table-hover" style={{ transform: "scale(0.7)"}} >
         <tbody>

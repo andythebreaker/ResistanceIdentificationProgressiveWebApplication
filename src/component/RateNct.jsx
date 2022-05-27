@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React/*, { Component, useState }*/ from "react";
 import { Rating, Message } from "semantic-ui-react";
 
 export class RateNct extends React.Component {

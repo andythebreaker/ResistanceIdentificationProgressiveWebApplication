@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React/*, { Component, useState }*/ from "react";
 import AppSubMain from './AppSubMain';
 import { Tfmd } from "./Tfmd.js";
 import {BackToTop} from "./component/backtotop.jsx"
@@ -6,10 +6,10 @@ import "./css/backtotop.css";
 import Webcam from "react-webcam";
 import "./css/appMain.css"
 
-const videoConstraints = {
+/*const videoConstraints = {
   width: 1280,
   height: 720,
-};
+};*/
 //videoConstraints={videoConstraints}
 export class AppMain extends React.Component {
 

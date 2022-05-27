@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
 export function MyBtnComp(props) {
-  const [state, setState] = useState('idle');
+  const [state, /*setState*/] = useState('idle');
   const MySwal = withReactContent(Swal)
   const onClickHandler = (e) => {
     console.log(e);

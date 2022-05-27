@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import MagicDropzone from "react-magic-dropzone";
-import { ci } from 'case-insensitive';
+//import { ci } from 'case-insensitive';
 
 import "./styles.css";
 const tf = require('@tensorflow/tfjs');
