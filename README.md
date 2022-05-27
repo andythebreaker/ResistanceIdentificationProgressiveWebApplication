@@ -16,7 +16,7 @@
 
 |ver|node|
 |--|--|
-|10|16???|
+|10|17.90|
 
 `"start": "PORT=18877 react-scripts start",`
 
