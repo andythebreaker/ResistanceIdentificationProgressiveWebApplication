@@ -17,6 +17,10 @@ jobs:
           npm install
           sed -i s/\"\/\"/\"\/ResistanceIdentificationProgressiveWebApplication\/\"/g package.json
           npm run-script build
+          
+      - name: PreDeploy 🔰
+        run: |
+          choco install rsync --no-progress
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
