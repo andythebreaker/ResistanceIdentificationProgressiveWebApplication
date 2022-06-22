@@ -29,10 +29,14 @@ html {
 }
 
 #root {
-  height: 100%;
+  height: 100vh;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   overflow: hidden;
+}
+
+body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+  overflow: visible!important;
 }

@@ -1,4 +1,4 @@
-document.getElementById('regionCrop').addEventListener('click', function (e) {
+var RCWCB = (CB = () => { console.log("not using CB!!") }) => {
     var income_img_height = document.getElementById('SOLUimgPerspectiveTransformation').getAttribute('height');
     var income_img_width = document.getElementById('SOLUimgPerspectiveTransformation').getAttribute('width');
     var squareLengthAndWidth_h = parseInt(income_img_height, 10) * 8.0 / (6.0 + 8.0 + 8.0);
@@ -33,7 +33,7 @@ document.getElementById('regionCrop').addEventListener('click', function (e) {
     canvas2.height = cropHeight0;
     var ctx2 = canvas2.getContext('2d');
     ctx2.drawImage(document.getElementById('SOLUimgPerspectiveTransformation'), cropX0, cropY0, cropWidth0, cropHeight0, 0, 0, cropWidth0, cropHeight0);
-    toReact(1, canvas2, 225,150.545454)//cropWidth0, cropHeight0);
+    toReact(1, canvas2, 225, 150.545454)//cropWidth0, cropHeight0);
     ////////////////
     var cropX0a = parseInt(income_img_width, 10) * 1.15 * 0.1 / (1.15 + 0.9 + 1.15) + parseInt(income_img_width, 10) * 0 / (1.15 + 0.9 + 1.15);
     var cropY0a = parseInt(income_img_height, 10) * 6.0 * 0.1 / (6.0 + 8.0 + 8.0) + parseInt(income_img_height, 10) * 8.0 / (6.0 + 8.0 + 8.0);
@@ -55,7 +55,7 @@ document.getElementById('regionCrop').addEventListener('click', function (e) {
     var ctx2b = canvas2b.getContext('2d');
     ctx2b.drawImage(document.getElementById('SOLUimgPerspectiveTransformation'), cropX0b, cropY0b, cropWidth0b, cropHeight0b, 0, 0, cropWidth0b, cropHeight0b);
 
-overlayCanvases(document.getElementById('backgroundL'), document.getElementById('backgroundR'));
+    overlayCanvases(document.getElementById('backgroundL'), document.getElementById('backgroundR'));
     ///////////////////////////
 
     for (let index = 0; index < 6; index++) {
@@ -74,7 +74,7 @@ overlayCanvases(document.getElementById('backgroundL'), document.getElementById(
         canvas1.height = cropHeight;
         var ctx1 = canvas1.getContext('2d');
         ctx1.drawImage(document.getElementById('SOLUimgPerspectiveTransformation'), cropX, cropY, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight);
-        toReact(index + 2, canvas1, 133.333333,200.727272)//cropWidth, cropHeight);
+        toReact(index + 2, canvas1, 133.333333, 200.727272)//cropWidth, cropHeight);
     }
     for (let index = 0; index < 6; index++) {
         var crp1 = document.createElement('canvas');
@@ -92,9 +92,13 @@ overlayCanvases(document.getElementById('backgroundL'), document.getElementById(
         canvas1.height = cropHeight;
         var ctx1 = canvas1.getContext('2d');
         ctx1.drawImage(document.getElementById('SOLUimgPerspectiveTransformation'), cropX, cropY, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight);
-        toReact(index + 8, canvas1, 133.333333,200.727272)// cropWidth, cropHeight);
+        toReact(index + 8, canvas1, 133.333333, 200.727272)// cropWidth, cropHeight);
     }
-});
+    CB();
+}
+
+document.getElementById('regionCrop').addEventListener('click', function (e) { RCWCB(); }
+);
 /* assumes each canvas has the same dimensions */
 var overlayCanvases = function (cnv1, cnv2/*, cnv3*/) {//https://stackoverflow.com/questions/38851963/how-to-combine-3-canvas-html-elements-into-1-image-file-using-javascript-jquery
     /*
@@ -116,14 +120,14 @@ var overlayCanvases = function (cnv1, cnv2/*, cnv3*/) {//https://stackoverflow.c
 
     ctx.drawImage(cnv1, 0, 0, cnv1.width, cnv1.height);
     ctx.drawImage(cnv2, 0, cnv2.height, cnv2.width, cnv2.height);
-    newCanvas.id="overlayCanvases";
+    newCanvas.id = "overlayCanvases";
     document.body.appendChild(newCanvas);
     //$(".reactTransImagePath:nth-child(0)").val(newCanvas.toDataURL());
     /*document.getElementsByClassName('rtU')[0].innerText = newCanvas.toDataURL();
     document.getElementsByClassName('rtW')[0].innerText = width;
     document.getElementsByClassName('rtH')[0].innerText = height;
     document.getElementsByClassName('reactTransRefresh')[0].click();
-    */toReact(0, newCanvas,200,191.333333)// width, height);
+    */toReact(0, newCanvas, 200, 191.333333)// width, height);
     /*function setKeywordText(text) {
         var el = document.getElementsByClassName('reactTransImagePath')[0];
         el.value = text;
@@ -151,7 +155,7 @@ ____                       __
 /_____/\____/  /_/ /_/\____/\__/  /_/   \___/\__,_/____/\___/ 
                                                           
 */
-    console.log(canvDOM); 
+    console.log(canvDOM);
     let src = cv.imread(canvDOM);
     let dst = new cv.Mat();
     cv.resize(src, dst, { width: ww, height: hh });

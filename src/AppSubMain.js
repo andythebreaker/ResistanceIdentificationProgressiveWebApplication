@@ -57,7 +57,7 @@ function AppSubMain() {
   <h1 class="splt">EGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEGEG</h1>
   <div class="divFlex divExperiment" style="width:1188; margin-left:auto; margin-right:auto;">
       <div class="floatLeft"><canvas id="canvasAutoCrop" width="1000" height="570"></canvas></div>
-      <div class="floatLeft"><button class="buttonFilter" onclick="clickDetectCorners()">1. Detect Corners</button>
+      <div class="floatLeft"><button class="buttonFilter" id="aorplane1" onclick="clickDetectCorners()">1. Detect Corners</button>
           <div class="buttonFilter justLeaveItAnyway" onclick="clickSelectCropArea()">2. Select Crop Area</div>
           <div class="buttonFilter justLeaveItAnyway" onclick="clickAutoCropCrop()">3. Crop</div><button class="buttonFilter" onclick="clickAutoCropReset()">Reset</button>
       </div>
@@ -200,6 +200,7 @@ move to react!
 </div>-->
 `;
 
+  const status12 = useScript("https://code.jquery.com/jquery-3.6.0.min.js");
   const statusN1 = useScript("https://www.marvinj.org/releases/marvinj-0.9.js");
   const status0 = useScript("https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.0/algebra.min.js");
   const status1 = useScript("/javascripts/index.js");
@@ -213,9 +214,20 @@ move to react!
   const status9 = useScript("/javascripts/TARGimgPerspectiveTransformation.js");
   const status10 = useScript("/javascripts/regionCrop.js");
   const status11 = useScript("/kmeans/index.js");
-  const status12 = useScript("https://code.jquery.com/jquery-3.6.0.min.js");
   const status13 = useScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.5/swiper-bundle.min.js");
-  const status14= useScript("./addjsfuc/swipeadd.js");
+  const status14 = useScript("./addjsfuc/swipeadd.js");
+  const status15 = useScript("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js");
+  /*因為傳統marvin執行時的設計錯誤
+  會出現
+  找不到長寬高
+  因為該物件被隱藏
+  cdn呼叫併發錯誤
+  ===================================
+  semantic.min.js:11 Uncaught ReferenceError: jQuery is not defined
+    at semantic.min.js:11:6043
+  ===================================
+  */
+  const status16 = useScript("./javascripts/swp.js");
 
   return (
     <div className="App">
@@ -229,46 +241,50 @@ move to react!
           {//嚴格遵守順序
           }
           Script statusN1: <b>{statusN1}</b>
-          {statusN1 === "ready" && (
-            <div className="dpn1">
-              Script status0: <b>{status0}</b>
-              Script status1: <b>{status1}</b>
-              Script status2: <b>{status2}</b>
-              Script status3: <b>{status3}</b>
-              Script status4: <b>{status4}</b>
-              Script status5: <b>{status5}</b>
-              Script status6: <b>{status6}</b>
-              Script status7: <b>{status7}</b>
-              Script status8: <b>{status8}</b>
-              Script status9: <b>{status9}</b>
-              Script status10: <b>{status10}</b>
-              Script status11: <b>{status11}</b>
-              Script status12: <b>{status12}</b>
-              Script status13: <b>{status13}</b>
-              Script status14: <b>{status14}</b>
-              {status0 === "ready" &&
-                status1 === "ready" &&
-                status2 === "ready" &&
-                status3 === "ready" &&
-                status4 === "ready" &&
-                status5 === "ready" &&
-                status6 === "ready" &&
-                status7 === "ready" &&
-                status8 === "ready" &&
-                status9 === "ready" &&
-                status10 === "ready" &&
-                status11 === "ready" &&
-                status12 === "ready" &&
-                status13 === "ready" &&
-                status14 === "ready" &&
-                (
-                  <div>
-                    <p>這裡面的東西就是已經載入外部JS了</p>
-                    <UiPhone />
-                  </div>
-                )}
-            </div>
-          )}    </div>
+          Script status12: <b>{status12}</b>
+          {statusN1 === "ready" &&
+            status12 === "ready" && (
+              <div className="dpn1">
+                Script status0: <b>{status0}</b>
+                Script status1: <b>{status1}</b>
+                Script status2: <b>{status2}</b>
+                Script status3: <b>{status3}</b>
+                Script status4: <b>{status4}</b>
+                Script status5: <b>{status5}</b>
+                Script status6: <b>{status6}</b>
+                Script status7: <b>{status7}</b>
+                Script status8: <b>{status8}</b>
+                Script status9: <b>{status9}</b>
+                Script status10: <b>{status10}</b>
+                Script status11: <b>{status11}</b>
+                Script status13: <b>{status13}</b>
+                Script status14: <b>{status14}</b>
+                Script status15: <b>{status15}</b>
+                Script status16: <b>{status16}</b>
+                {status0 === "ready" &&
+                  status1 === "ready" &&
+                  status2 === "ready" &&
+                  status3 === "ready" &&
+                  status4 === "ready" &&
+                  status5 === "ready" &&
+                  status6 === "ready" &&
+                  status7 === "ready" &&
+                  status8 === "ready" &&
+                  status9 === "ready" &&
+                  status10 === "ready" &&
+                  status11 === "ready" &&
+                  status13 === "ready" &&
+                  status14 === "ready" &&
+                  status15 === "ready" &&
+                  status16 === "ready" &&
+                  (
+                    <div>
+                      <p>這裡面的東西就是已經載入外部JS了</p>
+                      <UiPhone />
+                    </div>
+                  )}
+              </div>
+            )}    </div>
       </div>
       <div id="switchFromTraditional" dangerouslySetInnerHTML={{ __html: data }}>
       </div>

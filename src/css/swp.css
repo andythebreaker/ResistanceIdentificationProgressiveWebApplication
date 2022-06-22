@@ -1,6 +1,7 @@
 .picker {
     position: relative;
-    width: 16em;/*(3)*4+2*/
+    width: 16em;
+    /*(3)*4+2*/
     overflow: hidden;
     margin: 1rem auto 0;
     outline: 1px solid #ccc;
@@ -94,4 +95,21 @@
     bottom: 0.5rem;
     border-bottom-width: 0;
     border-top-color: currentColor;
+}
+
+.glowBG {
+    color: #000000;
+    -webkit-animation: glowBG 1s ease-in-out infinite alternate;
+    -moz-animation: glowBG 1s ease-in-out infinite alternate;
+    animation: glowBG 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowBG {
+    from {
+        text-shadow: 0 0 1em #ffffff, 0 0 1em #ffffff, 0 0 1em #ffffff, 0 0 1em #ffffff;
+    }
+
+    to {
+        text-shadow: 0 0 1em #ffffff, 0 0 1em #ffffff, 0 0 1em #ffffff, 0 0 1em #ffffff;
+    }
 }

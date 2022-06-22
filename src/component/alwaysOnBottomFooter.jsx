@@ -1,31 +1,33 @@
+//copy form src/component/backtotop.jsx
 import React, { PureComponent } from "react";
 import styled from "styled-components";
+import Speech from 'react-speech';
 /*https://www.npmjs.com/package/react-back-to-top-button*/
 const Button = styled.button({
   fontSize: "5px",
   position: "fixed",
-  //top: "89vh",//bottom
-  top: "0vh",
-  left: "0vw",
+  top: "95vh",//bottom
+  //top: "0vh",//top
+  left: `${props => (props.lr)}`,
   //left: "89vw",//right
-  margin: "1vh 1vh 1vw 1vw",
-  borderRadius: "90%",
+  margin: "0vh 0vh 0vw 0vw",
+  borderRadius: "0%",
   border: "none",
   opacity: "0.99",
   visibility: "visible",
   cursor: "pointer",
   outline: "none",
   background: "#ffc0cb",
-  height: "8em",
-  width: "8em",
+  height: "5vh",
+  width: "50vw",
 });
 
-export class BackToTop extends PureComponent {
+export class AlwaysOnBottomFooter extends PureComponent {
 
   constructor(props) {
     super(props);
     this.state = {
-      onclickFucn: props.ocf
+      onclickFucn: props.ocf,
     }
   }
 
@@ -34,14 +36,14 @@ export class BackToTop extends PureComponent {
   };
 
   render() {
-    return (
+    return (<div>
       <Button
-        className="back-to-top"
+        className="back-to-top2"
         onClick={this.state.onclickFucn}
         style={this.props.style}
       >
-        {this.props.children || "翻轉鏡頭"}
-      </Button>
+        {this.props.children || "MDinfo"}
+      </Button><Speech text={this.props.children} voice="Google UK English Female" /></div>
     );
   }
 }
