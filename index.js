@@ -18,6 +18,7 @@ args.push('--use-gl=egl', '--enable-features=VaapiVideoDecoder');
     });*/
     const browser = await puppeteer.launch({ ignoreDefaultArgs: true, args });
     const page = await browser.newPage();
+    
     page
         .on('console', message => {
             const type = message.type().substr(0, 3).toUpperCase();
@@ -29,18 +30,26 @@ args.push('--use-gl=egl', '--enable-features=VaapiVideoDecoder');
             };
             const color = colors[type] || blue;
             console.log(color(`💻 【${type}】 ${message.text()}`));
-            if(type==='LOG'){
+            if (type === 'LOG') {
                 /**
                  * read log, if see "back_to_top...end!!!"
                  * that is ... html load all ok
-                 * TODO:NO want any error
                  */
-                if(message.text()==='back_to_top...end!!!'){
+                if (message.text() === 'back_to_top...end!!!') {
                     uilog.ohint("BTTE");
                 }//NOELSE
             }//NOELSE
         })
-        .on('pageerror', ({ message }) => console.log(red(`❌ ${message}`)))
+        .on('pageerror', ({ message }) => {
+            console.log(red(`❌ ${message}`));
+            if (message.includes("$")) {
+                /**
+                 * if JQUERY load in TOO LATE
+                 * TODO: do something
+                 */
+                uilog.ohint("JQURY!");
+            }
+        })
         .on('response', response =>
             console.log(green(`📟 ${response.status()} ${response.url().startsWith('data:') ? response.url().slice(0, 48) + '...' :
                 response.url().length > 1000 ? '〔TOO LONG !!!〕' + response.url().slice(0, 48) : response.url()
