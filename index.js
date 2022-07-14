@@ -92,6 +92,24 @@ readimage.init(argv.input);
                 return document.querySelector('.QFF').textContent
             });
             console.log(textContent);
+            QFFmod = Date.now();
+            var qdn = Date.now();
+            setTimeout(() => {
+                async function killall() {
+                    /*TODO
+                    1. maek DB
+                    2. put all html & css to DB for debug
+                    3. find MD sol.
+                    */
+                    await browser.close();
+                }
+                if (QFFmod > qdn) {
+                    console.log("no kill");
+                } else {
+                    console.log("killall");
+                    killall();
+                }
+            }, 30000);//30sec
         }
         plm();
     });
