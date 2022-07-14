@@ -1,13 +1,20 @@
 //const pptr = require('puppeteer-core');
 const puppeteer = require('puppeteer');
-const { blue, cyan, green, magenta, red, yellow, gray } = require('colorette');
+const { blue, cyan, green, magenta, red, yellow, gray } = require('colorette');//TODO GRAY/OR/white
 var randomstring = require("randomstring");
 const moment = require('moment');
-var uilog = require('./UTI/TABF.js');
-
+var uilog = require('./UTI/TABF.js'); var readimage = require('./UTI/readimg.js');
 const args = puppeteer.defaultArgs();
 args.push('--use-gl=egl', '--enable-features=VaapiVideoDecoder');
-
+var argv = require('minimist')(process.argv.slice(2));
+//const tmp = require('tmp');
+console.log(argv);
+var QFFmod = 0;
+//var reader = require('b64image_reader');
+//var copy = require('copy');
+//var result = "";
+//var imageinputed = "";
+readimage.init(argv.input);
 (async () => {
     console.log("=========start=========");
     /*const browser = await pptr.launch({
@@ -18,27 +25,42 @@ args.push('--use-gl=egl', '--enable-features=VaapiVideoDecoder');
     });*/
     const browser = await puppeteer.launch({ ignoreDefaultArgs: true, args });
     const page = await browser.newPage();
-    
+    // await page._client.send('Page.setDownloadBehavior', {behavior: 'allow', downloadPath: './my-downloads'})
+    const client = await page.target().createCDPSession();
+    await client.send('Page.setDownloadBehavior', {
+        behavior: 'allow', downloadPath: './my-downloads'
+    });
     page
         .on('console', message => {
-            const type = message.type().substr(0, 3).toUpperCase();
-            const colors = {
-                LOG: gray,// text => text,
-                ERR: red,
-                WAR: yellow,
-                INF: cyan
-            };
-            const color = colors[type] || blue;
-            console.log(color(`💻 【${type}】 ${message.text()}`));
-            if (type === 'LOG') {
-                /**
-                 * read log, if see "back_to_top...end!!!"
-                 * that is ... html load all ok
-                 */
-                if (message.text() === 'back_to_top...end!!!') {
-                    uilog.ohint("BTTE");
+            async function on_console() {
+                const type = message.type().substr(0, 3).toUpperCase();
+                const colors = {
+                    LOG: gray,// text => text,
+                    ERR: red,
+                    WAR: yellow,
+                    INF: cyan
+                };
+                const color = colors[type] || blue;
+                console.log(color(`💻 【${type}】 ${message.text()}`));
+                if (type === 'LOG') {
+                    /**
+                     * read log, if see "back_to_top...end!!!"
+                     * that is ... html load all ok
+                     */
+                    if (message.text() === 'back_to_top...end!!!') {
+                        uilog.ohint("BTTE");
+                        const shunt = await page.evaluate((imageinputed) => {
+
+                            //console.log(evalVar); // 2. should be defined now
+                            //…
+                            document.getElementById("cvstart0BTON").innerText = imageinputed;
+                            document.getElementById("cvstart0BTON").click();
+
+                        }, readimage.img64_()); // 1. pass variable as an argument
+                    }//NOELSE
                 }//NOELSE
-            }//NOELSE
+            }
+            on_console();
         })
         .on('pageerror', ({ message }) => {
             console.log(red(`❌ ${message}`));
@@ -60,5 +82,48 @@ args.push('--use-gl=egl', '--enable-features=VaapiVideoDecoder');
                 }`)))
     await page.goto('https://andythebreaker.github.io');
     await page.screenshot({ path: `./tmppic/${moment().format("dddd_MMMM_Do_YYYY__h_mm_ss_a")}__${randomstring.generate()}.jpg` });
+    await page.waitForSelector(".QFF", { timeout: 600000 });//10min time out
     //await browser.close();
+    await page.exposeFunction('puppeteerLogMutation', () => {
+        async function plm() {
+            var textContent = "";
+            console.log('Mutation Detected: A child node has been added or removed.');
+            textContent = await page.evaluate(() => {
+                return document.querySelector('.QFF').textContent
+            });
+            console.log(textContent);
+        }
+        plm();
+    });
+
+    await page.evaluate(() => {
+        //var textContent_puppeteer = "[]"; var textContent__puppeteer = "[]";
+        const target = document.querySelector('.QFF');
+        const observer = new MutationObserver(mutations => {
+            for (const mutation of mutations) {
+                if (mutation.type === 'childList') {
+                    puppeteerLogMutation();
+                }
+            }
+        });
+        observer.observe(target, { childList: true });
+    });
+    //await watchdog(browser, page);
 })();
+/*var textContent = "[]"; var textContent_ = "[]";
+
+async function watchdog(br, pg) {
+    async function WD_() {
+        textContent_ = textContent;
+        textContent = await pg.evaluate(() => {
+            return document.querySelector('.QFF').textContent
+        });
+        console.log(textContent);
+    }
+    setTimeout(() => {
+        if (textContent==="[]" || (textContent != textContent_)) { WD_(); } else {
+            console.log("EOF!");
+            async function tmpAF() { await br.close(); } tmpAF();
+        }
+    }, 30000);
+}*/
