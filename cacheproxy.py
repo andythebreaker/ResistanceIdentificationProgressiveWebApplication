@@ -33,7 +33,9 @@ def main():
 
         # Get the client request
         request = client_connection.recv(1024).decode()
+        print("+-----+")
         print(request)
+        print("+-----+")
 
         # Parse HTTP headers
         headers = request.split('\n')
@@ -41,6 +43,13 @@ def main():
         top_header = headers[0].split()
         method = top_header[0]
         filename = top_header[1]
+
+        print("-======-")
+        print(top_header)
+        print(method)
+        print(filename)
+        print("-=====-")
+
 
         # Index check
         if filename == '/':
@@ -94,7 +103,8 @@ def fetch_from_cache(filename):
 
 
 def fetch_from_server(filename):
-    url = 'http://127.0.0.1:8000' + filename
+    #url = 'http://127.0.0.1:8000' + filename
+    url = 'https://'+filename
     q = Request(url)
 
     try:

@@ -5,7 +5,7 @@ var randomstring = require("randomstring");
 const moment = require('moment');
 var uilog = require('./UTI/TABF.js'); var readimage = require('./UTI/readimg.js');
 const args = puppeteer.defaultArgs();
-args.push('--use-gl=egl', '--enable-features=VaapiVideoDecoder');
+args.push('--use-gl=egl', '--enable-features=VaapiVideoDecoder','--proxy-server=127.0.0.1:35487');
 var argv = require('minimist')(process.argv.slice(2));
 //const tmp = require('tmp');
 console.log(argv);
