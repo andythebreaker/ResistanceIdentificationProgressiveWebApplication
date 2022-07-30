@@ -1,0 +1,601 @@
+{ _: [], input: './newcolormatrix.jpg' }
+=========start=========
+File:  /tmp/tmp-762310-g4KXVhM0tpO2
+[
+  'data:image/jpg;base64,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bnRGI1JsdAAAAAAAAAAAAAAAAEJsZCBVbnRGI1JsdAAAAAAAAAAAAAAAAFJzbHRVbnRGI1B4bEBSAAAAAAAAAAAACnZlY3RvckRhdGFib29sAQAAAABQZ1BzZW51bQAAAABQZ1BzAAAAAFBnUEMAAAAATGVmdFVudEYjUmx0AAAAAAAAAAAAAAAAVG9wIFVudEYjUmx0AAAAAAAAAAAAAAAAU2NsIFVudEYjUHJjQFkAAAAAAAAAAAAQY3JvcFdoZW5QcmludGluZ2Jvb2wAAAAADmNyb3BSZWN0Qm90dG9tbG9uZwAAAAAAAAAMY3JvcFJlY3RMZWZ0bG9uZwAAAAAAAAANY3JvcFJlY3RSaWdodGxvbmcAAAAAAAAAC2Nyb3BSZWN0VG9wbG9uZwAAAAAAOEJJTQPtAAAAAAAQAEgAAAABAAIASAAAAAEAAjhCSU0EJgAAAAAADgAAAAAAAAAAAAA/gAAAOEJJTQQNAAAAAAAE////xDhCSU0EGQAAAAAABAAAAB44QklNA/MAAAAAAAkAAAAAAAAAAAEAOEJJTScQAAAAAAAKAAEAAAAAAAAAAjhCSU0D9QAAAAAASAAvZmYAAQBsZmYABgAAAAAAAQAvZmYAAQChmZoABgAAAAAAAQAyAAAAAQBaAAAABgAAAAAAAQA1AAAAAQAtAAAABgAAAAAAAThCSU0D+AAAAAAAcAAA/////////////////////////////wPoAAAAAP////////////////////////////8D6AAAAAD/////////////////////////////A+gAAAAA/////////////////////////////wPoAAA4QklNBAgAAAAAABAAAAABAAACQAAAAkAAAAAAOEJJTQQeAAAAAAAEAAAAADhCSU0EGgAAAAADUwAAAAYAAAAAAAAAAAAABXoAAAfIAAAADwAyADAAMgAyADAANwAxADQAXwAyADAANAA1ADUANwAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAHyAAABXoAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAAG51bGwAAAACAAAABmJvdW5kc09iamMAAAABAAAAAAAAUmN0MQAAAAQAAAAAVG9wIGxvbmcAAAAAAAAA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'... 1650078 more characters
+]
+📟 200 https://andythebreaker.github.io/
+💻 【WAR】 Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
+📟 200 https://andythebreaker.github.io/static/js/main.db14c28b.js
+📟 200 https://andythebreaker.github.io/static/css/main.d5431761.css
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 JSHandle@array
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/model.json
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/model.json
+📟 200 https://code.jquery.com/jquery-3.6.0.min.js
+📟 200 https://www.marvinj.org/releases/marvinj-0.9.js
+📟 200 https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.0/algebra.min.js
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+📟 200 https://andythebreaker.github.io/javascripts/index.js
+📟 200 https://andythebreaker.github.io/javascripts/marvin.js
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+📟 200 https://andythebreaker.github.io/libs/qunit-2.0.1.js
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+📟 200 https://andythebreaker.github.io/index.js
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+📟 200 https://andythebreaker.github.io/libs/d3.v3.min.js
+📟 200 https://andythebreaker.github.io/utils.js
+📟 200 https://andythebreaker.github.io/libs/numeric-solve.min.js
+📟 200 https://andythebreaker.github.io/perspective.js
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard4of20.bin
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 ./bill.png
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard14of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard15of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard12of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard18of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard7of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard16of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard10of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard14of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard17of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard13of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard2of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard5of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard19of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard12of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard1of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard9of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard4of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard10of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard6of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard13of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard15of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard6of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard3of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard11of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard2of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard20of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard11of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard3of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard5of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard1of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard7of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard9of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard18of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard17of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard20of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard19of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard8of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard16of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard8of20.bin
+📟 200 https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.5/swiper-bundle.min.js
+📟 200 https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+📟 200 https://andythebreaker.github.io/javascripts/regionCrop.js
+📟 200 https://andythebreaker.github.io/bill.png
+📟 200 https://andythebreaker.github.io/javascripts/taballdatacros.js
+📟 200 https://andythebreaker.github.io/kmeans/index.js
+📟 200 https://andythebreaker.github.io/javascripts/swp.js
+📟 200 https://andythebreaker.github.io/postInstall/opencv.js
+📟 200 https://andythebreaker.github.io/javascripts/TARGimgPerspectiveTransformation.js
+📟 200 https://andythebreaker.github.io/addjsfuc/swipeadd.js
+📟 200 https://andythebreaker.github.io/logo512.png
+📟 200 https://cdn.jsdelivr.net/gh/antimatter15/rgb-lab@master/color.js
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard9of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+❌ TypeError: Failed to fetch
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard10of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard11of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard12of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard13of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard14of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard15of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard16of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard17of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard19of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard20of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard1of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+❌ TypeError: Failed to fetch
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard2of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard3of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard4of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard5of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard6of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard7of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard8of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard9of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard10of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard11of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard12of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard13of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard14of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard15of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard16of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard17of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard18of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard19of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 
+  _   _   _   _   _   _  
+ /  /  /  /  /  /  
+( k | m | e | a | n | s )
+ _/ _/ _/ _/ _/ _/ 
+
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 load swp.js....
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 jQuery is now loaded
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 JSHandle@node
+💻 【LOG】 ready!
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard20of20.bin
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+📟 200 https://andythebreaker.github.io/addHTML/swp.html
+📟 200 https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css
+💻 【LOG】 into swipe
+📟 200 https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin
+📟 200 data:application/x-font-ttf;charset=utf-8;base64...
+📟 200 https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjx4wXg.woff2
+📟 200 https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh6UVSwiPGQ.woff2
+🛑 net::ERR_HTTP2_PROTOCOL_ERROR https://andythebreaker.github.io/postInstall/opencv.js
+💻 【ERR】 Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR
+❌ TypeError: Cannot set properties of null (setting 'innerHTML')
+    at Utils.printError (https://andythebreaker.github.io/utils.js:93:36)
+    at HTMLScriptElement.<anonymous> (https://andythebreaker.github.io/utils.js:15:18)
+💻 【LOG】 back_to_top...end!!!
+┌────────┐
+│ hint   │
+├────────┤
+│ BTTE   │
+└────────┘
+💻 【LOG】 JSHandle@object
+📟 200 data:image/jpg;base64,/9j/4Q9IRXhpZgAATU0AKgAAAA...
+💻 【LOG】 w=1992 h=1402
+❌ ReferenceError: cv is not defined
+    at c000img.onload (https://andythebreaker.github.io/javascripts/marvin.js:46:19)

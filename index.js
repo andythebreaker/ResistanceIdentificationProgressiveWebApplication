@@ -1,11 +1,12 @@
 //const pptr = require('puppeteer-core');
+console.time("main");
 const puppeteer = require('puppeteer');
 const { blue, cyan, green, magenta, red, yellow, gray } = require('colorette');//TODO GRAY/OR/white
 var randomstring = require("randomstring");
 const moment = require('moment');
 var uilog = require('./UTI/TABF.js'); var readimage = require('./UTI/readimg.js');
 const args = puppeteer.defaultArgs();
-args.push('--use-gl=egl', '--enable-features=VaapiVideoDecoder','--proxy-server=127.0.0.1:35487');
+args.push('--use-gl=egl', '--enable-features=VaapiVideoDecoder');//,'--proxy-server=127.0.0.1:35487');
 var argv = require('minimist')(process.argv.slice(2));
 //const tmp = require('tmp');
 console.log(argv);
@@ -107,6 +108,7 @@ readimage.init(argv.input);
                     console.log("no kill");
                 } else {
                     console.log("killall");
+			console.log("main");
                     killall();
                 }
             }, 30000);//30sec
