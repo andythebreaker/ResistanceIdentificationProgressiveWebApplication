@@ -1,5 +1,7 @@
 //const pptr = require('puppeteer-core');
 console.time("main");
+const makeDir = require('make-dir');
+var sanitizeF = require("sanitize-filename");
 const puppeteer = require('puppeteer');
 const { blue, cyan, green, magenta, red, yellow, gray } = require('colorette');//TODO GRAY/OR/white
 var randomstring = require("randomstring");
@@ -28,8 +30,11 @@ readimage.init(argv.input);
     const page = await browser.newPage();
     // await page._client.send('Page.setDownloadBehavior', {behavior: 'allow', downloadPath: './my-downloads'})
     const client = await page.target().createCDPSession();
+	var filenameP = sanitizeF(argv.input);
+	const pathD = await makeDir('download/'+filenameP+'/'+String(Date.now()));
+	console.log(pathD);
     await client.send('Page.setDownloadBehavior', {
-        behavior: 'allow', downloadPath: './my-downloads'
+        behavior: 'allow', downloadPath: pathD
     });
     page
         .on('console', message => {

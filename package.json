@@ -11,13 +11,15 @@
     "url": "https://github.com/andythebreaker/ResistanceIdentificationProgressiveWebApplication.git"
   },
   "scripts": {
-    "start": "node index.js","test":"node index.js --input=./newcolormatrix.jpg"
+    "start": "node index.js",
+    "test": "node index.js --input=./newcolormatrix.jpg"
   },
   "dependencies": {
     "b64image_reader": "^1.0.2",
     "cli-table": "^0.3.11",
     "colorette": "^2.0.19",
     "copy": "^0.3.2",
+    "make-dir": "^3.1.0",
     "minimist": "^1.2.6",
     "moment": "^2.29.3",
     "moment-timezone": "^0.5.34",
@@ -25,6 +27,7 @@
     "puppeteer": "~15.3.1",
     "puppeteer-core": "~15.3.1",
     "randomstring": "^1.2.2",
+    "sanitize-filename": "^1.6.3",
     "stripchar": "^1.2.1",
     "tmp": "^0.2.1",
     "yargs": "^17.5.1"
