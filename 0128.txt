@@ -1,0 +1,653 @@
+{ _: [], input: '0128.jpg' }
+=========start=========
+File:  /tmp/tmp-2258043-B2GuZ6zd0tFc
+[
+  'data:image/jpg;base64,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AGxmZgAGAAAAAAABAC9mZgABAKGZmgAGAAAAAAABADIAAAABAFoAAAAGAAAAAAABADUAAAABAC0AAAAGAAAAAAABOEJJTQP4AAAAAABwAAD/////////////////////////////A+gAAAAA/////////////////////////////wPoAAAAAP////////////////////////////8D6AAAAAD/////////////////////////////A+gAADhCSU0ECAAAAAAAEAAAAAEAAAJAAAACQAAAAAA4QklNBB4AAAAAAAQAAAAAOEJJTQQaAAAAAANTAAAABgAAAAAAAAAAAAAMgAAACJAAAAAPADIAMAAyADIAMAA3ADIANgBfADEANQA1ADUAMQA4AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAiQAAAMgAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAbnVsbAAAAAIAAAAGYm91bmRzT2JqYwAAAAEAAAAAAABSY3QxAAAABAAAAABUb3AgbG9uZwAAAAAAAAAATGVmdGxvbmcAAAAAAAAAAEJ0b21sb25nAAAMgAAAAABSZ2h0bG9uZwAACJAAAAAGc2xpY2VzVmxMcwAAAAFPYmpjAAAAAQAAAAAABXNsaWNlAAAAEgAAAAdzbGljZUlEbG9uZwAAAAAAAAAHZ3JvdXBJRGxvbmcAAAAAAAAABm9yaWdpbmVudW0AAAAMRVNsaWNlT3JpZ2luAAAADWF1dG9HZW5lcmF0ZWQAAAAAVHlwZWVudW0AAAAKRVNsaWNlVHlwZQAAAABJbWcgAAAABmJvdW5kc09iamMAAAABAAAAAAAAUmN0MQAAAAQAAAAAVG9wIGxvbmcAAAAAAAAAAExlZnRsb25nAAAAAAAAAABCdG9tbG9uZwAADIAAAAAAUmdodGxvbmcAAAiQAAAAA3VybFRFWFQAAAABAAAAAAAAbnVsbFRFWFQAAAABAAAAAAAATXNnZVRFWFQAAAABAAAAAAAGYWx0VGFnVEVYVAAAAAEAAAAAAA5jZWxsVGV4dElzSFRNTGJvb2wBAAAACGNlbGxUZXh0VEVYVAAAAAEAAAAAAAlob3J6QWxpZ25lbnVtAAAAD0VTbGljZUhvcnpBbGln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+SkxSUSnMKxUe6cpu6Sn/9bflOCoSnBT0MwVm/Wd7mdAy3N5Ar5/42taAKDn4dXUMK3Cuc5ldwAc5kbhtc2wbdwc36TEYmpAnoQo3RretHzj7Vf4gfILpvqda9+N1MvMmaAOB2vR/wDmP03tlZH/AIH/AOk1dweiVdIxcluPe+wXlrnGxrZBZua2Nm399T5MkJQIG7FCOUS9UrHm0/rde+n6qMewA7rKNwPhq/T+1sXCszzBD6A+OSHlv/fXr0fqXRWdY6VTg33upY012h1bWkyxpa1vvP8ALWIf8XNAdLOp2jwmlp/JYqpjfRnE5DQGnR+ot7LujXPZX6Q+1PBaXb5Oyr3btta6GVl/V7oo6HgOwxd9oL7XXGzbs+kGM27Nz/otZ+8tKUQgm9VEpilKYlFCxKj3SKjOqCn/19sFOChyVKU9SQFOChgqQKSGcjSSBPElBzXRjPHiNU9tVNzdtzG2NHAcAYPkhV4OLW8PYyNplolxAI7hhd6f/RSU2gNrQO7QB9whKU0pSkpeUk0pSklUpiUpUSUkKJUe6RKjOqCn/9DXlPKHKeU9CQFOChgqQKSmYcCnlD3HsE8pJZynlQlKUkM5SlQlKUlMiVElMSokpKXJUZ1TEpp1SU//2ThCSU0EIQAAAAAAVwAAAAEBAAAADwBBAGQAbwBiAGUAIABQAGgAbwB0AG8AcwBoAG8AcAAAABQAQQBkAG8AYgBlACAAUABoAG8AdABvAHMAaABvAHAAIAAyADAAMgAwAAAAAQA4QklNBAYAAAAAAAcACAAAAAEBAP/hDspodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ4IDc5LjE2NDAzNiwgMjAxOS8wOC8xMy0wMTowNjo1NyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtcDpNb2RpZnlEYXRlPSIyMDIyLTA3LTMwVDEwOjA5OjI4KzA4OjAwIiB4bX'... 3348238 more characters
+]
+/home/andythebreaker/progress/n21/ResistanceIdentificationProgressiveWebApplication/download/0128.jpg/1659495409672
+📟 200 https://andythebreaker.github.io/
+💻 【WAR】 Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
+📟 200 https://andythebreaker.github.io/static/css/main.d5431761.css
+📟 200 https://andythebreaker.github.io/static/js/main.db14c28b.js
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 JSHandle@array
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/model.json
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+📟 200 https://andythebreaker.github.io/bill.png
+📟 200 https://andythebreaker.github.io/logo512.png
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/model.json
+📟 200 https://code.jquery.com/jquery-3.6.0.min.js
+📟 200 https://www.marvinj.org/releases/marvinj-0.9.js
+📟 200 https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.0/algebra.min.js
+📟 200 https://andythebreaker.github.io/javascripts/index.js
+📟 200 https://andythebreaker.github.io/javascripts/marvin.js
+📟 200 https://andythebreaker.github.io/libs/qunit-2.0.1.js
+📟 200 https://andythebreaker.github.io/utils.js
+📟 200 https://andythebreaker.github.io/perspective.js
+📟 200 https://andythebreaker.github.io/libs/d3.v3.min.js
+📟 200 https://andythebreaker.github.io/libs/numeric-solve.min.js
+📟 200 https://andythebreaker.github.io/index.js
+📟 200 https://andythebreaker.github.io/javascripts/TARGimgPerspectiveTransformation.js
+📟 200 https://andythebreaker.github.io/javascripts/regionCrop.js
+📟 200 https://andythebreaker.github.io/kmeans/index.js
+📟 200 https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.5/swiper-bundle.min.js
+📟 200 https://andythebreaker.github.io/addjsfuc/swipeadd.js
+📟 200 https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js
+📟 200 https://andythebreaker.github.io/javascripts/swp.js
+📟 200 https://cdn.jsdelivr.net/gh/antimatter15/rgb-lab@master/color.js
+📟 200 https://andythebreaker.github.io/javascripts/taballdatacros.js
+💻 【LOG】 ./bill.png
+💻 【LOG】 
+  _   _   _   _   _   _  
+ /  /  /  /  /  /  
+( k | m | e | a | n | s )
+ _/ _/ _/ _/ _/ _/ 
+
+💻 【LOG】 load swp.js....
+💻 【LOG】 jQuery is now loaded
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 JSHandle@node
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard2of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard5of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard3of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard4of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard1of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard6of20.bin
+💻 【LOG】 ready!
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard7of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard8of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard9of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard10of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard11of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard12of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard14of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard15of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard16of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard17of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard18of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard19of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard20of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard1of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard2of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard3of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard5of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard6of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard8of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard9of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard10of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard12of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard14of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard15of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard16of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard17of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard18of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard19of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard20of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard7of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard11of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard13of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard4of20.bin
+📟 200 https://andythebreaker.github.io/postInstall/opencv.js
+📟 200 https://andythebreaker.github.io/addHTML/swp.html
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard13of20.bin
+📟 200 https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css
+📟 200 https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin
+💻 【LOG】 into swipe
+📟 200 data:application/x-font-ttf;charset=utf-8;base64...
+💻 【LOG】 opencv loaded
+💻 【LOG】 exe-AfterOpenCVisLoaded
+📟 200 https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjx4wXg.woff2
+📟 200 https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh6UVSwiPGQ.woff2
+📟 200 data:application/octet-stream;base64,AGFzbQEAAAA...
+💻 【LOG】 
+General configuration for OpenCV 4.5.0 =====================================
+  Version control:               4.5.0
+
+  Platform:
+    Timestamp:                   2020-10-11T21:37:29Z
+    Host:                        Linux 4.4.0-190-generic x86_64
+    Target:                      Emscripten 1 x86
+    CMake:                       3.10.2
+    CMake generator:             Unix Makefiles
+    CMake build tool:            /usr/bin/make
+    Configuration:               Release
+
+  CPU/HW features:
+    Baseline:
+
+  C/C++:
+    Built as dynamic libs?:      NO
+    C++ standard:                11
+    C++ Compiler:                /opt/emsdk-portable/upstream/emscripten/em++  (ver 10.0.0)
+    C++ flags (Release):         -s USE_PTHREADS=0    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -fdiagnostics-show-option -Qunused-arguments -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DNDEBUG -O2  -DNDEBUG
+    C++ flags (Debug):           -s USE_PTHREADS=0    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -fdiagnostics-show-option -Qunused-arguments -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG
+    C Compiler:                  /opt/emsdk-portable/upstream/emscripten/emcc
+    C flags (Release):           -s USE_PTHREADS=0    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -fdiagnostics-show-option -Qunused-arguments -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DNDEBUG -O2  -DNDEBUG
+    C flags (Debug):             -s USE_PTHREADS=0    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -fdiagnostics-show-option -Qunused-arguments -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG
+    Linker flags (Release):      -Wl,--gc-sections -Wl,--as-needed -O2 
+    Linker flags (Debug):        -Wl,--gc-sections -Wl,--as-needed  
+    ccache:                      NO
+    Precompiled headers:         NO
+    Extra dependencies:
+    3rdparty dependencies:       zlib libprotobuf
+
+  OpenCV modules:
+    To be built:                 calib3d core dnn features2d flann imgproc js objdetect photo video
+    Disabled:                    highgui imgcodecs java_bindings_generator ml python_bindings_generator stitching videoio world
+    Disabled by dependency:      -
+    Unavailable:                 gapi java python2 python3 ts
+    Applications:                -
+    Documentation:               js
+    Non-free algorithms:         NO
+
+  GUI: 
+
+  Media I/O: 
+    ZLib:                        build (ver 1.2.11)
+    JPEG 2000:                   build (ver 2.3.1)
+    HDR:                         YES
+    SUNRASTER:                   YES
+    PXM:                         YES
+    PFM:                         YES
+
+  Video I/O:
+
+  Parallel framework:            none
+
+  Other third-party libraries:
+    Custom HAL:                  NO
+    Protobuf:                    build (3.5.1)
+
+  Python (for build):            /usr/bin/python2.7
+
+  Install to:                    /build/master-contrib_docs-lin64/build/js/install
+-----------------------------------------------------------------
+
+
+💻 【LOG】 back_to_top...end!!!
+┌────────┐
+│ hint   │
+├────────┤
+│ BTTE   │
+└────────┘
+💻 【LOG】 JSHandle@object
+📟 200 data:image/jpg;base64,/9j/4Qn4RXhpZgAATU0AKgAAAA...
+💻 【LOG】 w=2192 h=3200
+💻 【LOG】 [Automatic Progress Indicator Scale]🛬exampleFilters
+📟 200 data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABA...
+💻 【LOG】 w2=1000 h2=570
+💻 【LOG】 [Automatic Progress Indicator Scale]🛬exampleAutoCrop
+💻 【LOG】 [Automatic Progress Indicator Scale]🛬clickDetectCorners
+💻 【LOG】 [Automatic Progress Indicator Scale]🛬trig_corner_finish
+💻 【LOG】 Found match, group 0: 413*240
+💻 【LOG】 Found match, group 1: 413
+💻 【LOG】 Found match, group 2: 240
+💻 【LOG】 message [regex] got into default
+💻 【LOG】 Found match, group 0: 900*246
+💻 【LOG】 Found match, group 1: 900
+💻 【LOG】 Found match, group 2: 246
+💻 【LOG】 message [regex] got into default
+💻 【LOG】 Found match, group 0: 410*366
+💻 【LOG】 Found match, group 1: 410
+💻 【LOG】 Found match, group 2: 366
+💻 【LOG】 message [regex] got into default
+💻 【LOG】 Found match, group 0: 890*366
+💻 【LOG】 Found match, group 1: 890
+💻 【LOG】 Found match, group 2: 366
+💻 【LOG】 message [regex] got into default
+💻 【LOG】 [Automatic Progress Indicator Scale]🛬TARGimgPerspectiveTransformation
+💻 【LOG】 SOLUimgPerspectiveTransformation:
+    height=690
+    width=1000
+💻 【LOG】 SOLUimgPerspectiveTransformation:
+    height=690
+    width=1000
+💻 【LOG】 SOLUimgPerspectiveTransformation:
+    height=690
+    width=1000
+💻 【LOG】 SOLUimgPerspectiveTransformation:
+    height=690
+    width=1000
+💻 【LOG】 SOLUimgPerspectiveTransformation:
+    height=690
+    width=1000
+💻 【LOG】 [Automatic Progress Indicator Scale]🛬RCWCB
+💻 【LOG】 good
+💻 【LOG】 myres
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 overlayCanvases
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpU0
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpU1
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpU2
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpU3
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpU4
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpU5
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpD0
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpD1
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpD2
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpD3
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpD4
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 good
+💻 【LOG】 crpD5
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 [Automatic Progress Indicator Scale]🛬wakuwaku
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAO...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+💻 【WAR】 High memory usage in GPU: 274.68 MB, most likely due to a memory leak
+💻 【LOG】 [Automatic Progress Indicator Scale]🛬md
+💻 【LOG】 [Automatic Progress Indicator Scale]🛬md
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 4 is repeated 7950 times
+💻 【LOG】 Value 5 is repeated 2254 times
+💻 【LOG】 Value 2 is repeated 4747 times
+💻 【LOG】 Value 3 is repeated 3199 times
+💻 【LOG】 Value 6 is repeated 9151 times
+💻 【LOG】 Value 7 is repeated 3891 times
+💻 【LOG】 Value 1 is repeated 1383 times
+💻 【LOG】 Value 0 is repeated 1175 times
+💻 【LOG】 9151 4
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 0 is repeated 12826 times
+💻 【LOG】 Value 2 is repeated 13664 times
+💻 【LOG】 Value 1 is repeated 8259 times
+💻 【LOG】 Value 4 is repeated 1881 times
+💻 【LOG】 Value 3 is repeated 1570 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 0 is repeated 14902 times
+💻 【LOG】 Value 2 is repeated 11431 times
+💻 【LOG】 Value 1 is repeated 267 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 2 is repeated 10129 times
+💻 【LOG】 Value 1 is repeated 14655 times
+💻 【LOG】 Value 0 is repeated 1816 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 1 is repeated 11905 times
+💻 【LOG】 Value 0 is repeated 11569 times
+💻 【LOG】 Value 2 is repeated 3126 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 1 is repeated 11287 times
+💻 【LOG】 Value 0 is repeated 7106 times
+💻 【LOG】 Value 2 is repeated 8207 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 2 is repeated 13093 times
+💻 【LOG】 Value 0 is repeated 13507 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 2 is repeated 17330 times
+💻 【LOG】 Value 0 is repeated 7784 times
+💻 【LOG】 Value 1 is repeated 1486 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 2 is repeated 11161 times
+💻 【LOG】 Value 0 is repeated 1868 times
+💻 【LOG】 Value 1 is repeated 13571 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 0 is repeated 9917 times
+💻 【LOG】 Value 2 is repeated 12176 times
+💻 【LOG】 Value 1 is repeated 4507 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 0 is repeated 202 times
+💻 【LOG】 Value 1 is repeated 1063 times
+💻 【LOG】 Value 2 is repeated 25335 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 0 is repeated 18120 times
+💻 【LOG】 Value 1 is repeated 7558 times
+💻 【LOG】 Value 2 is repeated 922 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 0 is repeated 6283 times
+💻 【LOG】 Value 2 is repeated 11490 times
+💻 【LOG】 Value 1 is repeated 8827 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 0 is repeated 7498 times
+💻 【LOG】 Value 1 is repeated 13576 times
+💻 【LOG】 Value 2 is repeated 5526 times
+💻 【LOG】 13664 1
+💻 【LOG】 14902 0
+💻 【LOG】 14655 1
+💻 【LOG】 11905 0
+💻 【LOG】 11287 0
+💻 【LOG】 13507 1
+💻 【LOG】 17330 0
+💻 【LOG】 13571 2
+💻 【LOG】 12176 1
+💻 【LOG】 25335 2
+💻 【LOG】 18120 0
+💻 【LOG】 11490 1
+💻 【LOG】 13576 1
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 ncb document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText1
+💻 【LOG】 167:Black#
+💻 【LOG】 ncb document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText2
+💻 【LOG】 167:Black#
+💻 【LOG】 ncb document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText3
+💻 【LOG】 167:Black#
+💻 【LOG】 248:Black#
+💻 【LOG】 248:Black#
+💻 【LOG】 248:Black#
+💻 【LOG】 wcb document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText1
+💻 【LOG】 167:Brown#
+💻 【LOG】 wcb document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText2
+💻 【LOG】 167:Yellow#
+💻 【LOG】 wcb document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText3
+💻 【LOG】 167:Brown#
+💻 【LOG】 248:Brown#
+💻 【LOG】 248:Yellow#
+💻 【LOG】 248:Brown#
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAo...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAo...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAo...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAo...
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAo...
+💻 【LOG】 🥠🥠🥠
+💻 【LOG】 🍕🍕🍕🍕🍕🍕🍕🍕🍕
+💻 【LOG】 🥗🥗🥗
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 componentDidUpdate
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE...
+💻 【LOG】 🥠🥠🥠
+💻 【LOG】 🍕🍕🍕🍕🍕🍕🍕🍕🍕
+💻 【LOG】 🌯🌯🌯
+💻 【LOG】 🍕🍕🍕🍕🍕🍕🍕🍕🍕
+💻 【LOG】 🥗🥗🥗
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 componentDidUpdate
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE...
+💻 【LOG】 🥠🥠🥠
+💻 【LOG】 🍕🍕🍕🍕🍕🍕🍕🍕🍕
+💻 【LOG】 🌯🌯🌯
+💻 【LOG】 🍕🍕🍕🍕🍕🍕🍕🍕🍕
+💻 【LOG】 🌯🌯🌯
+💻 【LOG】 🍕🍕🍕🍕🍕🍕🍕🍕🍕
+💻 【LOG】 🥗🥗🥗
+💻 【LOG】 ➰➰➰
+💻 【LOG】 dokmeans
+💻 【LOG】 🍴🍴
+💻 【LOG】 componentDidUpdate
+📟 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF...
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 3 is repeated 829 times
+💻 【LOG】 Value 0 is repeated 6616 times
+💻 【LOG】 Value 1 is repeated 4988 times
+💻 【LOG】 Value 2 is repeated 8939 times
+💻 【LOG】 8939 3
+💻 【LOG】 🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠
+💻 【LOG】 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+💻 【LOG】 componentDidUpdate
+Mutation Detected: A child node has been added or removed.
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 1 is repeated 1768 times
+💻 【LOG】 Value 3 is repeated 5782 times
+💻 【LOG】 Value 2 is repeated 3474 times
+💻 【LOG】 Value 0 is repeated 8365 times
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@array
+💻 【LOG】 Value 3 is repeated 3396 times
+💻 【LOG】 Value 2 is repeated 7420 times
+💻 【LOG】 Value 1 is repeated 5709 times
+💻 【LOG】 Value 0 is repeated 9575 times
+💻 【LOG】 8365 3
+[{"idx":0,"clonum":7}]
+💻 【LOG】 9575 3
+💻 【LOG】 🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠
+💻 【LOG】 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+💻 【LOG】 🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠🎠
+💻 【LOG】 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+Mutation Detected: A child node has been added or removed.
+Mutation Detected: A child node has been added or removed.
+[{"idx":0,"clonum":7},{"idx":1,"clonum":9},{"idx":2,"clonum":6}]
+[{"idx":0,"clonum":7},{"idx":1,"clonum":9},{"idx":2,"clonum":6}]

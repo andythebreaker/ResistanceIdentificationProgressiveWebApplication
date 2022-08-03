@@ -1,0 +1,208 @@
+{ _: [], input: '0087.jpg' }
+=========start=========
+File:  /tmp/tmp-2339655-vmgQ6bG3kz68
+[
+  'data:image/jpg;base64,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bWxvbmcAAAAAAAAADGNyb3BSZWN0TGVmdGxvbmcAAAAAAAAADWNyb3BSZWN0UmlnaHRsb25nAAAAAAAAAAtjcm9wUmVjdFRvcGxvbmcAAAAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCYAAAAAAA4AAAAAAAAAAAAAP4AAADhCSU0D8gAAAAAACgAA////////AAA4QklNBA0AAAAAAAT////EOEJJTQQZAAAAAAAEAAAAHjhCSU0D8wAAAAAACQAAAAAAAAAAAQA4QklNJxAAAAAAAAoAAQAAAAAAAAABOEJJTQP1AAAAAABIAC9mZgABAGxmZgAGAAAAAAABAC9mZgABAKGZmgAGAAAAAAABADIAAAABAFoAAAAGAAAAAAABADUAAAABAC0AAAAGAAAAAAABOEJJTQP4AAAAAABwAAD/////////////////////////////A+gAAAAA/////////////////////////////wPoAAAAAP////////////////////////////8D6AAAAAD/////////////////////////////A+gAADhCSU0ECAAAAAAAEAAAAAEAAAJAAAACQAAAAAA4QklNBB4AAAAAAAQAAAAAOEJJTQQaAAAAAANbAAAABgAAAAAAAAAAAAAHEQAACJAAAAATADIAMAAyADIAMAA3ADIANgBfADEANQA0ADYAMAAxACAAKAAyACkAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAACJAAAAcRAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAAAAAABudWxsAAAAAgAAAAZib3VuZHNPYmpjAAAAAQAAAAAAAFJjdDEAAAAEAAAAAFRvcCBsb25nAAAAAAAAAABMZWZ0bG9uZwAAAAAAAAAAQnRvbWxvbmcAAAcRAAAAAFJnaHRsb25nAAAIkAAAAAZzbGljZXNWbExzAAAAAU9iamMAAAABAAAAAAAFc2xpY2UAAAASAAAAB3NsaWNlSURsb25nAAAAAAAAAAdncm91cElEbG9uZwAAAAAAAAAGb3JpZ2luZW51bQAAAAxFU2xpY2VPcmlnaW4AAAANYXV0b0dlbmVyYXRlZAAAAABUeXBlZW51bQAAAApFU2xpY2VU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'... 2095238 more characters
+]
+/home/andythebreaker/progress/n21/ResistanceIdentificationProgressiveWebApplication/download/0087.jpg/1659501230479
+📟 200 https://andythebreaker.github.io/
+💻 【WAR】 Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
+📟 200 https://andythebreaker.github.io/static/css/main.d5431761.css
+📟 200 https://andythebreaker.github.io/static/js/main.db14c28b.js
+💻 【LOG】 JSHandle@array
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 JSHandle@object
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidMount
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 JSHandle@array
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/model.json
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+📟 200 https://andythebreaker.github.io/logo512.png
+📟 200 https://andythebreaker.github.io/bill.png
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/model.json
+📟 200 https://code.jquery.com/jquery-3.6.0.min.js
+📟 200 https://www.marvinj.org/releases/marvinj-0.9.js
+📟 200 https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.0/algebra.min.js
+📟 200 https://andythebreaker.github.io/javascripts/index.js
+📟 200 https://andythebreaker.github.io/javascripts/marvin.js
+📟 200 https://andythebreaker.github.io/libs/qunit-2.0.1.js
+📟 200 https://andythebreaker.github.io/utils.js
+📟 200 https://andythebreaker.github.io/perspective.js
+📟 200 https://andythebreaker.github.io/libs/d3.v3.min.js
+📟 200 https://andythebreaker.github.io/libs/numeric-solve.min.js
+📟 200 https://andythebreaker.github.io/index.js
+📟 200 https://andythebreaker.github.io/javascripts/TARGimgPerspectiveTransformation.js
+📟 200 https://andythebreaker.github.io/javascripts/regionCrop.js
+📟 200 https://andythebreaker.github.io/kmeans/index.js
+📟 200 https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.5/swiper-bundle.min.js
+📟 200 https://andythebreaker.github.io/addjsfuc/swipeadd.js
+📟 200 https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js
+📟 200 https://andythebreaker.github.io/javascripts/swp.js
+📟 200 https://cdn.jsdelivr.net/gh/antimatter15/rgb-lab@master/color.js
+📟 200 https://andythebreaker.github.io/javascripts/taballdatacros.js
+💻 【LOG】 ./bill.png
+💻 【LOG】 
+  _   _   _   _   _   _  
+ /  /  /  /  /  /  
+( k | m | e | a | n | s )
+ _/ _/ _/ _/ _/ _/ 
+
+💻 【LOG】 load swp.js....
+💻 【LOG】 jQuery is now loaded
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 componentDidUpdate
+💻 【LOG】 JSHandle@node
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard3of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard2of20.bin
+💻 【LOG】 ready!
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+💻 【LOG】 🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍🎍 JSHandle@node
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard1of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard10of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard12of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard6of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard14of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard11of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard4of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard13of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard5of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard8of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard9of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard7of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard15of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard20of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard17of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard4of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard20of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard14of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard8of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard3of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard7of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard18of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard9of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard16of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard11of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard1of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard18of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard12of20.bin
+📟 200 https://andythebreaker.github.io/postInstall/opencv.js
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard10of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard19of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard5of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard16of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard13of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard19of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard2of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard6of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/ncb/web_model/group1-shard17of20.bin
+📟 200 https://andythebreaker.github.io/ftmdg/wcb/web_model/group1-shard15of20.bin
+📟 200 https://andythebreaker.github.io/addHTML/swp.html

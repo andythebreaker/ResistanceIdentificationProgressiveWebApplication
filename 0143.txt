@@ -1,0 +1,3 @@
+{ _: [], input: '0143.jpg' }
+=========start=========
+File:  /tmp/tmp-2292805-dsG3p0T0mIjS
